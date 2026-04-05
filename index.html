@@ -3,29 +3,34 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Javier Gomez Mijangos— Portfolio</title>
+  <title>Javier Gomez Mijangos</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- HEADER -->
-  <header>
-    <div class="header-content">
-      <h1>Javier Gomez Mijangos</h1>
-      <p class="tagline">Mathematics & Computer Science · Paris-Saclay University</p>
-      <nav>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
+  <main class="container">
 
-  <!-- ABOUT -->
-  <section id="about">
-    <div class="container">
-      <h2>About Me</h2>
+    <!-- HERO -->
+    <section id="hero">
+      <img src="avatar.jpg" alt="Javier Gomez Mijangos" class="avatar" />
+      <div class="hero-text">
+        <h1>Javier Gomez Mijangos</h1>
+        <p class="hero-title">Bachelor student in Mathematics & Computer Science<br>Université Paris-Saclay</p>
+        <div class="hero-links">
+          <a href="mailto:javier.gomezmijan@gmail.com">Email</a>
+          <span class="divider">·</span>
+          <a href="https://www.linkedin.com/in/javier-gomez-a01151283/" target="_blank">LinkedIn</a>
+          <span class="divider">·</span>
+          <a href="https://github.com/Javpato" target="_blank">GitHub</a>
+        </div>
+      </div>
+    </section>
+
+    <hr />
+
+    <!-- ABOUT -->
+    <section id="about">
+      <h2>About</h2>
       <p>
         I am a bachelor's student at <strong>Université Paris-Saclay</strong>, pursuing a double diploma
         in <strong>Mathematics and Computer Science</strong>. I am passionate about both the theoretical
@@ -33,100 +38,86 @@
         I enjoy solving complex problems and building things from scratch.
       </p>
       <p>
-        I am currently looking for opportunities where I can apply my skills in a professional
-        environment and keep growing as a developer.
+        I am currently looking for opportunities — internships or collaborations — where I can apply
+        my skills in a professional environment and keep growing as a developer.
       </p>
-    </div>
-  </section>
 
-  <!-- SKILLS -->
-  <section id="skills">
-    <div class="container">
-      <h2>Skills</h2>
-      <div class="skills-grid">
-        <div class="skill-card">
-          <span class="skill-icon">🐍</span>
-          <h3>Python</h3>
-          <p>Fluent — algorithms, scripting, data structures</p>
+      <h3>Skills</h3>
+      <div class="skills-list">
+        <div class="skill-item">
+          <span class="skill-name">Python</span>
+          <span class="skill-level">Fluent</span>
         </div>
-        <div class="skill-card">
-          <span class="skill-icon">⚙️</span>
-          <h3>C++</h3>
-          <p>Fluent — systems programming, performance-critical code</p>
+        <div class="skill-item">
+          <span class="skill-name">C++</span>
+          <span class="skill-level">Fluent</span>
         </div>
-        <div class="skill-card">
-          <span class="skill-icon">🌐</span>
-          <h3>JavaScript</h3>
-          <p>Familiar — web interactivity and scripting</p>
+        <div class="skill-item">
+          <span class="skill-name">JavaScript</span>
+          <span class="skill-level">Familiar</span>
         </div>
-        <div class="skill-card">
-          <span class="skill-icon">🎨</span>
-          <h3>HTML & CSS</h3>
-          <p>Familiar — web structure and styling</p>
+        <div class="skill-item">
+          <span class="skill-name">HTML & CSS</span>
+          <span class="skill-level">Familiar</span>
         </div>
-        <div class="skill-card">
-          <span class="skill-icon">∀</span>
-          <h3>Lean</h3>
-          <p>Formal mathematical proofs and theorem proving</p>
+        <div class="skill-item">
+          <span class="skill-name">Lean</span>
+          <span class="skill-level">Formal proofs & theorem proving</span>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- PROJECTS -->
-  <section id="projects">
-    <div class="container">
+    <hr />
+
+    <!-- PROJECTS -->
+    <section id="projects">
       <h2>Projects</h2>
-      <div class="projects-grid">
-        <div class="project-card">
-          <h3>Project Title</h3>
-          <p>Short description of what this project does and what technologies were used.</p>
-          <div class="project-links">
-            <a href="#" class="btn">GitHub</a>
-            <a href="#" class="btn btn-outline">Live Demo</a>
-          </div>
-        </div>
-        <div class="project-card">
-          <h3>Project Title</h3>
-          <p>Short description of what this project does and what technologies were used.</p>
-          <div class="project-links">
-            <a href="#" class="btn">GitHub</a>
-            <a href="#" class="btn btn-outline">Live Demo</a>
-          </div>
-        </div>
-        <div class="project-card">
-          <h3>Project Title</h3>
-          <p>Short description of what this project does and what technologies were used.</p>
-          <div class="project-links">
-            <a href="#" class="btn">GitHub</a>
-            <a href="#" class="btn btn-outline">Live Demo</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- CONTACT -->
-  <section id="contact">
-    <div class="container">
-      <h2>Contact</h2>
-      <p>Feel free to reach out — I am open to internships, collaborations, and opportunities.</p>
-      <div class="contact-links">
-        <a href="mailto:javier.gomezmijan@gmail.com" class="contact-item">
-          <span>✉️</span> javier.gomezmijan@gmail.com
-        </a>
-        <a href="https://www.linkedin.com/in/javier-gomez-a01151283/" target="_blank" class="contact-item">
-          <span>💼</span> LinkedIn
-        </a>
-        <a href="https://github.com/Javpato" target="_blank" class="contact-item">
-          <span>🐙</span> GitHub
-        </a>
+      <div class="project-card">
+        <img src="project1.jpg" alt="Project 1" class="project-thumb" />
+        <div class="project-info">
+          <h3><a href="#">Project Title</a></h3>
+          <p class="project-meta">Python · 2025</p>
+          <p>Short description of what this project does, what problem it solves, and what technologies were used. Replace this with your real project.</p>
+          <div class="project-links">
+            <a href="#">GitHub</a>
+            <a href="#">Live Demo</a>
+          </div>
+        </div>
       </div>
-    </div>
-  </section>
+
+      <div class="project-card">
+        <img src="project2.jpg" alt="Project 2" class="project-thumb" />
+        <div class="project-info">
+          <h3><a href="#">Project Title</a></h3>
+          <p class="project-meta">C++ · 2025</p>
+          <p>Short description of what this project does, what problem it solves, and what technologies were used. Replace this with your real project.</p>
+          <div class="project-links">
+            <a href="#">GitHub</a>
+            <a href="#">Live Demo</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="project3.jpg" alt="Project 3" class="project-thumb" />
+        <div class="project-info">
+          <h3><a href="#">Project Title</a></h3>
+          <p class="project-meta">JavaScript · 2025</p>
+          <p>Short description of what this project does, what problem it solves, and what technologies were used. Replace this with your real project.</p>
+          <div class="project-links">
+            <a href="#">GitHub</a>
+            <a href="#">Live Demo</a>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+  </main>
 
   <footer>
-    <p>© 2026 Javier Gomez</p>
+    <p>© 2026 Javier Gomez Mijangos</p>
   </footer>
 
 </body>

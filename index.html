@@ -4,121 +4,364 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Javier Gomez Mijangos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
 </head>
 <body>
 
-  <main class="container">
+  <div class="container">
 
-    <!-- HERO -->
-    <section id="hero">
-      <img src="avatar.jpg" alt="Javier Gomez Mijangos" class="avatar" />
-      <div class="hero-text">
-        <h1>Javier Gomez Mijangos</h1>
-        <p class="hero-title">Bachelor student in Mathematics & Computer Science<br>Université Paris-Saclay</p>
-        <div class="hero-links">
-          <a href="mailto:javier.gomezmijan@gmail.com">Email</a>
-          <span class="divider">·</span>
-          <a href="https://www.linkedin.com/in/javier-gomez-a01151283/" target="_blank">LinkedIn</a>
-          <span class="divider">·</span>
-          <a href="https://github.com/Javpato" target="_blank">GitHub</a>
+    <!-- ══ HERO ══ -->
+    <section id="hero" class="poke-box">
+      <div class="hero-inner">
+        <img src="avatar.jpg" alt="Javier Gomez Mijangos" class="avatar" />
+        <div class="hero-text">
+          <h1>JAVIER<br>GOMEZ<br>MIJANGOS</h1>
+          <p class="hero-title">BSC MATHEMATICS &amp; CS<br>UNIV. PARIS-SACLAY</p>
+          <nav class="hero-links">
+            <a href="mailto:javier.gomezmijan@gmail.com">[ EMAIL ]</a>
+            <a href="https://www.linkedin.com/in/javier-gomez-a01151283/" target="_blank">[ LINKEDIN ]</a>
+            <a href="https://github.com/Javpato" target="_blank">[ GITHUB ]</a>
+          </nav>
         </div>
       </div>
     </section>
 
-    <hr />
+    <!-- ══ ABOUT ══ -->
+    <section id="about" class="poke-box">
+      <h2>&gt; ABOUT</h2>
+      <div class="about-body">
+        <div class="about-text">
+          <p>
+            Bachelor's student at <strong>Universite Paris-Saclay</strong>,
+            double diploma in <strong>Mathematics and Computer Science</strong>.
+          </p>
+          <p>
+            Passionate about the theoretical foundations of maths and the
+            practical side of software. I enjoy solving hard problems and
+            building things from scratch.
+          </p>
+          <p>
+            Open to internships, collaborations, and opportunities.
+          </p>
+        </div>
 
-    <!-- ABOUT -->
-    <section id="about">
-      <h2>About</h2>
-      <p>
-        I am a bachelor's student at <strong>Université Paris-Saclay</strong>, pursuing a double diploma
-        in <strong>Mathematics and Computer Science</strong>. I am passionate about both the theoretical
-        foundations of mathematics and the practical applications of software development.
-        I enjoy solving complex problems and building things from scratch.
+        <!-- Lucario language widget -->
+        <div class="lucario-wrap">
+          <div class="speech-bubble">
+            <p class="bubble-title">LANGUAGES:</p>
+            <ul>
+              <li>French &mdash; Fluent</li>
+              <li>English &mdash; Fluent</li>
+              <li>Spanish &mdash; Fluent</li>
+              <li>Chinese &mdash; Basic</li>
+              <li>Arabic &mdash; Basic</li>
+            </ul>
+          </div>
+          <img
+            src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/448.png"
+            alt="Lucario"
+            class="lucario-sprite"
+          />
+          <p class="lucario-label">HOVER ME!</p>
+        </div>
+      </div>
+
+      <!-- Skills -->
+      <h2>&gt; SKILLS</h2>
+      <div class="skills-grid">
+
+        <div class="pokeball-item">
+          <div class="pokeball-wrap">
+            <div class="skill-popup"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" class="skill-logo" /></div>
+            <img
+              src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/ultra-ball.png"
+              alt="Ultra Ball"
+              class="pokeball-sprite"
+            />
+          </div>
+          <p class="skill-label">Python</p>
+        </div>
+
+        <div class="pokeball-item">
+          <div class="pokeball-wrap">
+            <div class="skill-popup"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++" class="skill-logo" /></div>
+            <img
+              src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/ultra-ball.png"
+              alt="Ultra Ball"
+              class="pokeball-sprite"
+            />
+          </div>
+          <p class="skill-label">C++</p>
+        </div>
+
+        <div class="pokeball-item">
+          <div class="pokeball-wrap">
+            <div class="skill-popup"><span class="skill-logo-text">&#8704;</span></div>
+            <img
+              src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/great-ball.png"
+              alt="Great Ball"
+              class="pokeball-sprite"
+            />
+          </div>
+          <p class="skill-label">Lean</p>
+        </div>
+
+        <div class="pokeball-item">
+          <div class="pokeball-wrap">
+            <div class="skill-popup"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" class="skill-logo" /></div>
+            <img
+              src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/poke-ball.png"
+              alt="Poke Ball"
+              class="pokeball-sprite"
+            />
+          </div>
+          <p class="skill-label">JavaScript</p>
+        </div>
+
+        <div class="pokeball-item">
+          <div class="pokeball-wrap">
+            <div class="skill-popup skill-popup-double"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" class="skill-logo" /><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" class="skill-logo" /></div>
+            <img
+              src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/poke-ball.png"
+              alt="Poke Ball"
+              class="pokeball-sprite"
+            />
+          </div>
+          <p class="skill-label">HTML &amp; CSS</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ══ INTERNSHIPS ══ -->
+    <section id="internships" class="poke-box">
+      <h2>&gt; INTERNSHIPS</h2>
+      <p class="section-sub">&#8212; LOCATIONS VISITED &#8212;</p>
+
+      <div class="towns-grid">
+
+        <div class="town-card visited">
+          <div class="town-sign-top">HUB71 CITY</div>
+          <div class="town-sign-body">
+            <span class="town-label">ABU DHABI</span>
+            <span class="town-badge">STARTUP HUB</span>
+          </div>
+          <div class="town-details">
+            <p class="town-role">&#9670; SHADOWED STARTUP CEOs</p>
+            <p class="town-desc">
+              Embedded with early-stage founders across multiple sectors.
+              Observed product decisions, investor meetings, and company
+              scaling challenges firsthand.
+            </p>
+          </div>
+        </div>
+
+        <div class="town-card placeholder">
+          <div class="town-sign-top">??? TOWN</div>
+          <div class="town-sign-body">
+            <span class="town-label">UNKNOWN</span>
+            <span class="town-badge">???</span>
+          </div>
+          <div class="town-details">
+            <p class="town-role">&#9670; COMING SOON...</p>
+            <p class="town-desc">This location has not been discovered yet.</p>
+          </div>
+        </div>
+
+        <div class="town-card placeholder">
+          <div class="town-sign-top">??? TOWN</div>
+          <div class="town-sign-body">
+            <span class="town-label">UNKNOWN</span>
+            <span class="town-badge">???</span>
+          </div>
+          <div class="town-details">
+            <p class="town-role">&#9670; COMING SOON...</p>
+            <p class="town-desc">This location has not been discovered yet.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ══ PROJECTS ══ -->
+    <section id="projects" class="poke-box">
+      <h2>&gt; PROJECTS</h2>
+
+      <div class="pokedex-grid">
+
+        <!-- Pikachu — Data Science -->
+        <div class="dex-card">
+          <div class="dex-header">
+            <span class="dex-number">No.025</span>
+            <span class="dex-name">KNIFE-SPOON-MON</span>
+          </div>
+          <div class="dex-body">
+            <div class="dex-sprite-area">
+              <img
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png"
+                alt="Pikachu"
+                class="dex-sprite"
+              />
+              <div class="dex-types">
+                <span class="type-tag type-electric">PYTHON</span>
+              </div>
+            </div>
+            <div class="dex-entry">
+              <p class="dex-entry-text">
+                Classifies kitchen utensils (knives vs spoons) with
+                <strong>97% accuracy</strong>. Built and trained a custom
+                image classification algorithm on a self-assembled dataset.
+              </p>
+              <div class="dex-links">
+                <a href="#">[ CODE ]</a>
+                <a href="#" class="open-demo">[ DEMO ]</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bulbasaur — placeholder -->
+        <div class="dex-card placeholder">
+          <div class="dex-header">
+            <span class="dex-number">No.001</span>
+            <span class="dex-name">???-MON</span>
+          </div>
+          <div class="dex-body">
+            <div class="dex-sprite-area">
+              <img
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png"
+                alt="Bulbasaur"
+                class="dex-sprite"
+              />
+              <div class="dex-types">
+                <span class="type-tag">???</span>
+              </div>
+            </div>
+            <div class="dex-entry">
+              <p class="dex-entry-text">ENTRY DATA PENDING.<br>PROJECT UNDER CONSTRUCTION.</p>
+              <div class="dex-links">
+                <a href="#">[ CODE ]</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Charmander — placeholder -->
+        <div class="dex-card placeholder">
+          <div class="dex-header">
+            <span class="dex-number">No.004</span>
+            <span class="dex-name">???-MON</span>
+          </div>
+          <div class="dex-body">
+            <div class="dex-sprite-area">
+              <img
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png"
+                alt="Charmander"
+                class="dex-sprite"
+              />
+              <div class="dex-types">
+                <span class="type-tag">???</span>
+              </div>
+            </div>
+            <div class="dex-entry">
+              <p class="dex-entry-text">ENTRY DATA PENDING.<br>PROJECT UNDER CONSTRUCTION.</p>
+              <div class="dex-links">
+                <a href="#">[ CODE ]</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <footer class="poke-box">
+      <p>&copy; 2026 JAVIER GOMEZ MIJANGOS</p>
+      <p class="footer-sub">
+        BUILT WITH HTML + CSS + A LITTLE MAGIC (
+        <a class="claude-credit" href="https://claude.ai" target="_blank">
+          <svg class="claude-logo" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-label="Claude">
+            <path d="M13.827 3.52c.3-.953 1.597-.953 1.896 0l1.75 5.576a1 1 0 0 0 .95.693h5.833c1.003 0 1.42 1.285.61 1.874l-4.72 3.437a1 1 0 0 0-.364 1.118l1.75 5.576c.3.953-.78 1.745-1.59 1.157l-4.72-3.437a1 1 0 0 0-1.175 0l-4.72 3.437c-.81.588-1.89-.204-1.59-1.157l1.75-5.576a1 1 0 0 0-.364-1.118L3.9 11.663c-.81-.589-.393-1.874.61-1.874h5.833a1 1 0 0 0 .95-.693l1.534-5.576z"/>
+          </svg>
+          CLAUDE
+        </a>
+        )
       </p>
-      <p>
-        I am currently looking for opportunities — internships or collaborations — where I can apply
-        my skills in a professional environment and keep growing as a developer.
-      </p>
+    </footer>
 
-      <h3>Skills</h3>
-      <div class="skills-list">
-        <div class="skill-item">
-          <span class="skill-name">Python</span>
-          <span class="skill-level">Fluent</span>
-        </div>
-        <div class="skill-item">
-          <span class="skill-name">C++</span>
-          <span class="skill-level">Fluent</span>
-        </div>
-        <div class="skill-item">
-          <span class="skill-name">JavaScript</span>
-          <span class="skill-level">Familiar</span>
-        </div>
-        <div class="skill-item">
-          <span class="skill-name">HTML & CSS</span>
-          <span class="skill-level">Familiar</span>
-        </div>
-        <div class="skill-item">
-          <span class="skill-name">Lean</span>
-          <span class="skill-level">Formal proofs & theorem proving</span>
-        </div>
-      </div>
-    </section>
+  </div>
 
-    <hr />
+  <!-- ══ DEMO MODAL ══ -->
+  <div id="demo-modal" class="modal-overlay" aria-hidden="true">
+    <div class="modal-box poke-box">
 
-    <!-- PROJECTS -->
-    <section id="projects">
-      <h2>Projects</h2>
+      <button class="modal-close">[ &#xD7; CLOSE ]</button>
+      <h2>&gt; KNIFE-SPOON-MON &middot; DEMO</h2>
 
-      <div class="project-card">
-        <img src="project1.jpg" alt="Project 1" class="project-thumb" />
-        <div class="project-info">
-          <h3><a href="#">Project Title</a></h3>
-          <p class="project-meta">Python · 2025</p>
-          <p>Short description of what this project does, what problem it solves, and what technologies were used. Replace this with your real project.</p>
-          <div class="project-links">
-            <a href="#">GitHub</a>
-            <a href="#">Live Demo</a>
+      <!-- Dataset -->
+      <div class="demo-section">
+        <h3>&#9670; DATASET</h3>
+        <p class="demo-desc">31 hand-photographed images on a white background. Two classes: knives and spoons.</p>
+        <div class="demo-image-grid">
+          <div class="demo-image-item">
+            <img src="assets/demo/spoon1.jpg" alt="spoon" />
+            <span class="demo-label spoon-label">SPOON</span>
+          </div>
+          <div class="demo-image-item">
+            <img src="assets/demo/spoon2.jpg" alt="spoon" />
+            <span class="demo-label spoon-label">SPOON</span>
+          </div>
+          <div class="demo-image-item">
+            <img src="assets/demo/spoon3.jpg" alt="spoon" />
+            <span class="demo-label spoon-label">SPOON</span>
+          </div>
+          <div class="demo-image-item">
+            <img src="assets/demo/knife1.jpg" alt="knife" />
+            <span class="demo-label knife-label">KNIFE</span>
+          </div>
+          <div class="demo-image-item">
+            <img src="assets/demo/knife2.jpg" alt="knife" />
+            <span class="demo-label knife-label">KNIFE</span>
+          </div>
+          <div class="demo-image-item">
+            <img src="assets/demo/knife3.jpg" alt="knife" />
+            <span class="demo-label knife-label">KNIFE</span>
           </div>
         </div>
       </div>
 
-      <div class="project-card">
-        <img src="project2.jpg" alt="Project 2" class="project-thumb" />
-        <div class="project-info">
-          <h3><a href="#">Project Title</a></h3>
-          <p class="project-meta">C++ · 2025</p>
-          <p>Short description of what this project does, what problem it solves, and what technologies were used. Replace this with your real project.</p>
-          <div class="project-links">
-            <a href="#">GitHub</a>
-            <a href="#">Live Demo</a>
-          </div>
+      <!-- Algorithm steps -->
+      <div class="demo-section">
+        <h3>&#9670; HOW IT WORKS</h3>
+        <ol class="demo-steps">
+          <li><span class="step-num">01</span> <strong>PREPROCESSING</strong> — Edge-based foreground detection isolates the utensil from the background. Image is cropped around the object's centre of mass.</li>
+          <li><span class="step-num">02</span> <strong>FEATURE EXTRACTION</strong> — 6 custom geometric features are computed: elongation, roundness, width variation, top/bottom symmetry, and two template-matching scores.</li>
+          <li><span class="step-num">03</span> <strong>CLASSIFICATION</strong> — A K-Nearest Neighbours classifier is trained and evaluated with 10-fold stratified cross-validation.</li>
+        </ol>
+      </div>
+
+      <!-- Result -->
+      <div class="demo-stat">
+        <div class="stat-block">
+          <span class="stat-number">97%</span>
+          <span class="stat-label">BALANCED ACCURACY</span>
+        </div>
+        <div class="stat-block">
+          <span class="stat-number">31</span>
+          <span class="stat-label">IMAGES</span>
+        </div>
+        <div class="stat-block">
+          <span class="stat-number">6</span>
+          <span class="stat-label">FEATURES</span>
         </div>
       </div>
 
-      <div class="project-card">
-        <img src="project3.jpg" alt="Project 3" class="project-thumb" />
-        <div class="project-info">
-          <h3><a href="#">Project Title</a></h3>
-          <p class="project-meta">JavaScript · 2025</p>
-          <p>Short description of what this project does, what problem it solves, and what technologies were used. Replace this with your real project.</p>
-          <div class="project-links">
-            <a href="#">GitHub</a>
-            <a href="#">Live Demo</a>
-          </div>
-        </div>
-      </div>
-
-    </section>
-
-  </main>
-
-  <footer>
-    <p>© 2026 Javier Gomez Mijangos</p>
-  </footer>
+    </div>
+  </div>
 
 </body>
 </html>

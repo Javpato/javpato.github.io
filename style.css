@@ -1,250 +1,764 @@
-/* ── PALETTE ──
-  dark navy  : rgb(33,  52,  72)
-  mid blue   : rgb(84,  119, 146)
-  light blue : rgb(148, 180, 193)
-  cream      : rgb(234, 224, 207)
-─────────────────────────────── */
+/* ════════════════════════════════════
+   PALETTE
+   dark navy  : rgb(33,  52,  72)
+   mid blue   : rgb(84,  119, 146)
+   light blue : rgb(148, 180, 193)
+   cream      : rgb(234, 224, 207)
+════════════════════════════════════ */
 
-* {
+/* ── RESET ── */
+*, *::before, *::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* ── BASE ── */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: rgb(33, 52, 72);
   color: rgb(234, 224, 207);
-  font-family: 'Georgia', serif;
-  font-size: 1rem;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 10px;
   line-height: 1.8;
-}
-
-/* ── CONTAINER ── */
-.container {
-  max-width: 860px;
-  margin: 0 auto;
-  padding: 60px 24px 40px;
-}
-
-/* ── DIVIDER ── */
-hr {
-  border: none;
-  border-top: 1px solid rgb(84, 119, 146);
-  margin: 50px 0;
-  opacity: 0.4;
-}
-
-/* ── HERO ── */
-#hero {
-  display: flex;
-  align-items: center;
-  gap: 40px;
-  margin-bottom: 50px;
-}
-
-.avatar {
-  width: 140px;
-  height: 140px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid rgb(84, 119, 146);
-  flex-shrink: 0;
-  /* placeholder color if image is missing */
-  background-color: rgb(84, 119, 146);
-}
-
-.hero-text h1 {
-  font-size: 2rem;
-  font-weight: normal;
-  color: rgb(234, 224, 207);
-  letter-spacing: 0.5px;
-}
-
-.hero-title {
-  margin-top: 6px;
-  font-size: 0.95rem;
-  color: rgb(148, 180, 193);
-  font-style: italic;
-  line-height: 1.5;
-}
-
-.hero-links {
-  margin-top: 14px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 0.9rem;
-}
-
-.hero-links a {
-  color: rgb(148, 180, 193);
-  text-decoration: none;
-  transition: color 0.2s;
-}
-
-.hero-links a:hover {
-  color: rgb(234, 224, 207);
-}
-
-.divider {
-  color: rgb(84, 119, 146);
-}
-
-/* ── SECTIONS ── */
-section {
-  margin-bottom: 10px;
-}
-
-h2 {
-  font-size: 1.3rem;
-  font-weight: normal;
-  color: rgb(148, 180, 193);
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  margin-bottom: 20px;
-}
-
-h3 {
-  font-size: 1rem;
-  font-weight: bold;
-  color: rgb(234, 224, 207);
-  margin: 30px 0 14px;
-}
-
-p {
-  color: rgb(234, 224, 207);
-  margin-bottom: 14px;
-  max-width: 700px;
-}
-
-strong {
-  color: rgb(234, 224, 207);
+  image-rendering: pixelated;
 }
 
 a {
   color: rgb(148, 180, 193);
   text-decoration: none;
-  transition: color 0.2s;
+  transition: color 0.15s;
 }
 
 a:hover {
   color: rgb(234, 224, 207);
 }
 
-/* ── SKILLS ── */
-.skills-list {
+strong {
+  color: rgb(234, 224, 207);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* ── CONTAINER ── */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px 60px;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 32px;
 }
 
-.skill-item {
-  display: flex;
-  align-items: baseline;
-  gap: 12px;
+/* ── POKE-BOX (reusable section frame) ── */
+.poke-box {
+  border: 4px solid rgb(234, 224, 207);
+  outline: 4px solid rgb(33, 52, 72);
+  box-shadow: 6px 6px 0 rgb(84, 119, 146);
+  background-color: rgb(33, 52, 72);
+  padding: 28px 28px 24px;
 }
 
-.skill-name {
-  font-weight: bold;
-  color: rgb(234, 224, 207);
-  min-width: 120px;
-}
-
-.skill-level {
+/* ── HEADINGS ── */
+h2 {
   font-size: 0.9rem;
   color: rgb(148, 180, 193);
+  letter-spacing: 2px;
+  margin-bottom: 22px;
 }
 
-/* ── PROJECT CARDS ── */
-.project-card {
+h2::after {
+  content: '_';
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+/* ── SECTION FADE-IN ── */
+section {
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ────────────────────────────────────
+   HERO
+──────────────────────────────────── */
+.hero-inner {
   display: flex;
-  gap: 28px;
-  margin-bottom: 40px;
-  align-items: flex-start;
+  align-items: center;
+  gap: 36px;
 }
 
-.project-thumb {
-  width: 180px;
+.avatar {
+  width: 120px;
   height: 120px;
+  border-radius: 50%;
   object-fit: cover;
-  border-radius: 6px;
+  border: 4px solid rgb(148, 180, 193);
   flex-shrink: 0;
-  border: 1px solid rgb(84, 119, 146);
-  /* placeholder color if image is missing */
+  image-rendering: auto;
   background-color: rgb(84, 119, 146);
-  opacity: 0.7;
 }
 
-.project-info h3 {
-  margin: 0 0 4px;
-  font-size: 1.05rem;
+.hero-text h1 {
+  font-size: 1.5rem;
+  color: rgb(234, 224, 207);
+  line-height: 2;
+  letter-spacing: 1px;
 }
 
-.project-info h3 a {
+.hero-title {
+  margin-top: 10px;
+  font-size: 0.65rem;
+  color: rgb(148, 180, 193);
+  line-height: 2;
+}
+
+.hero-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 16px;
+  font-size: 0.7rem;
+}
+
+.hero-links a {
+  color: rgb(234, 224, 207);
+  border: 2px solid rgb(84, 119, 146);
+  padding: 4px 8px;
+  transition: background-color 0.15s, color 0.15s;
+}
+
+.hero-links a:hover {
+  background-color: rgb(84, 119, 146);
   color: rgb(234, 224, 207);
 }
 
-.project-info h3 a:hover {
-  color: rgb(148, 180, 193);
+/* ────────────────────────────────────
+   ABOUT + LUCARIO
+──────────────────────────────────── */
+.about-body {
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+  margin-bottom: 36px;
 }
 
-.project-meta {
-  font-size: 0.85rem;
-  color: rgb(148, 180, 193);
-  margin-bottom: 8px;
-  font-style: italic;
+.about-text {
+  flex: 1;
 }
 
-.project-info p {
-  font-size: 0.92rem;
+.about-text p {
+  font-size: 0.7rem;
+  color: rgb(234, 224, 207);
+  margin-bottom: 16px;
+  line-height: 2;
+}
+
+/* Lucario speech bubble — pure CSS */
+.lucario-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  flex-shrink: 0;
+  cursor: pointer;
+  width: 110px;
+}
+
+.speech-bubble {
+  position: absolute;
+  bottom: calc(100% + 12px);
+  left: 50%;
+  transform: translateX(-50%) translateY(6px);
+  width: 200px;
+  background: rgb(234, 224, 207);
+  color: rgb(33, 52, 72);
+  border: 4px solid rgb(33, 52, 72);
+  padding: 10px 12px;
+  font-size: 0.6rem;
+  line-height: 2.2;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s, transform 0.2s;
+  z-index: 10;
+}
+
+.speech-bubble::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 8px solid transparent;
+  border-top-color: rgb(33, 52, 72);
+}
+
+.bubble-title {
+  font-size: 0.6rem;
+  color: rgb(33, 52, 72);
+  margin-bottom: 6px;
+}
+
+.speech-bubble li {
+  color: rgb(33, 52, 72);
+  font-size: 0.55rem;
+}
+
+.lucario-wrap:hover .speech-bubble {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(-50%) translateY(0);
+}
+
+.lucario-sprite {
+  width: 96px;
+  height: 96px;
+  image-rendering: pixelated;
+  filter: drop-shadow(0 0 6px rgb(84, 119, 146));
+  transition: filter 0.2s, transform 0.2s;
+}
+
+.lucario-wrap:hover .lucario-sprite {
+  filter: drop-shadow(0 0 14px rgb(148, 180, 193));
+  transform: translateY(-4px);
+}
+
+.lucario-label {
+  font-size: 0.5rem;
+  color: rgb(84, 119, 146);
+  margin-top: 6px;
+  text-align: center;
+  animation: blink 1.5s step-end infinite;
+}
+
+/* ────────────────────────────────────
+   SKILLS — POKEBALL ANIMATIONS
+──────────────────────────────────── */
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px 20px;
+  justify-content: center;
+  padding: 12px 0 4px;
+}
+
+.pokeball-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  width: 80px;
+}
+
+.pokeball-wrap {
+  position: relative;
+  width: 56px;
+  height: 56px;
+  cursor: pointer;
+}
+
+.pokeball-sprite {
+  position: absolute;
+  inset: 0;
+  width: 56px;
+  height: 56px;
+  image-rendering: pixelated;
+  transition: none;
+}
+
+.skill-popup {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  gap: 3px;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.skill-logo {
+  width: 40px;
+  height: 40px;
+  image-rendering: auto;
+  display: block;
+}
+
+.skill-popup-double .skill-logo {
+  width: 24px;
+  height: 24px;
+}
+
+.skill-logo-text {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 1.6rem;
+  color: rgb(234, 224, 207);
+  line-height: 1;
+}
+
+.skill-label {
+  font-size: 0.55rem;
+  color: rgb(148, 180, 193);
+  text-align: center;
+}
+
+/* Shake → fade out */
+@keyframes pokeball-shake {
+  0%   { transform: rotate(0deg);   opacity: 1; }
+  10%  { transform: rotate(-20deg); }
+  20%  { transform: rotate(20deg);  }
+  30%  { transform: rotate(-14deg); }
+  40%  { transform: rotate(14deg);  }
+  50%  { transform: rotate(-8deg);  }
+  60%  { transform: rotate(8deg);   }
+  70%  { transform: rotate(0deg);   opacity: 1; }
+  100% { transform: rotate(0deg);   opacity: 0; }
+}
+
+/* Logo replaces ball in same spot */
+@keyframes skill-appear {
+  0%   { opacity: 0; transform: scale(0.5); }
+  70%  { opacity: 0; transform: scale(0.5); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+.pokeball-wrap:hover .pokeball-sprite {
+  animation: pokeball-shake 0.9s ease forwards;
+}
+
+.pokeball-wrap:hover .skill-popup {
+  animation: skill-appear 0.9s ease forwards;
+}
+
+/* ────────────────────────────────────
+   INTERNSHIPS — TOWN CARDS
+──────────────────────────────────── */
+.section-sub {
+  font-size: 0.6rem;
+  color: rgb(84, 119, 146);
+  text-align: center;
+  margin-bottom: 24px;
+  letter-spacing: 3px;
+}
+
+.towns-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.town-card {
+  flex: 1 1 220px;
+  border: 4px solid rgb(234, 224, 207);
+  box-shadow: 4px 4px 0 rgb(84, 119, 146);
+  overflow: hidden;
+}
+
+.town-card.placeholder {
+  opacity: 0.38;
+  filter: grayscale(0.5);
+}
+
+.town-sign-top {
+  background: rgb(84, 119, 146);
+  color: rgb(234, 224, 207);
+  font-size: 0.65rem;
+  text-align: center;
+  padding: 10px 8px;
+  letter-spacing: 2px;
+  border-bottom: 4px solid rgb(234, 224, 207);
+}
+
+.town-sign-body {
+  background: rgb(148, 180, 193);
+  color: rgb(33, 52, 72);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 10px;
+  border-bottom: 4px solid rgb(234, 224, 207);
+  font-size: 0.55rem;
+}
+
+.town-badge {
+  background: rgb(33, 52, 72);
+  color: rgb(234, 224, 207);
+  padding: 3px 7px;
+  font-size: 0.5rem;
+}
+
+.town-details {
+  padding: 14px 12px;
+}
+
+.town-role {
+  color: rgb(148, 180, 193);
+  font-size: 0.58rem;
   margin-bottom: 10px;
 }
 
-.project-links {
+.town-desc {
+  color: rgb(234, 224, 207);
+  font-size: 0.58rem;
+  line-height: 2;
+  word-break: break-word;
+}
+
+/* ────────────────────────────────────
+   PROJECTS — POKEDEX CARDS
+──────────────────────────────────── */
+.pokedex-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.dex-card {
+  border: 4px solid rgb(234, 224, 207);
+  box-shadow: 4px 4px 0 rgb(84, 119, 146);
+  overflow: hidden;
+}
+
+.dex-card.placeholder {
+  opacity: 0.45;
+  filter: grayscale(0.5);
+}
+
+.dex-header {
+  background: rgb(84, 119, 146);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 14px;
+  border-bottom: 4px solid rgb(234, 224, 207);
+  font-size: 0.6rem;
+  color: rgb(234, 224, 207);
+}
+
+.dex-name {
+  font-size: 0.6rem;
+}
+
+.dex-body {
+  display: flex;
+}
+
+.dex-sprite-area {
+  flex-shrink: 0;
+  width: 130px;
+  background: rgb(84, 119, 146);
+  border-right: 4px solid rgb(234, 224, 207);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 8px;
+  gap: 10px;
+}
+
+.dex-sprite {
+  width: 80px;
+  height: 80px;
+  image-rendering: pixelated;
+  transition: transform 0.2s;
+}
+
+.dex-card:hover .dex-sprite {
+  transform: scale(1.15);
+}
+
+.dex-types {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.type-tag {
+  background: rgb(33, 52, 72);
+  color: rgb(148, 180, 193);
+  border: 2px solid rgb(148, 180, 193);
+  font-size: 0.48rem;
+  padding: 3px 6px;
+}
+
+.type-electric { border-color: #f4d03f; color: #f4d03f; }
+.type-psychic  { border-color: #e08aff; color: #e08aff; }
+
+.dex-entry {
+  padding: 16px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.dex-entry-text {
+  font-size: 0.62rem;
+  color: rgb(234, 224, 207);
+  line-height: 2.2;
+  word-break: break-word;
+}
+
+.dex-links {
   display: flex;
   gap: 14px;
-  font-size: 0.85rem;
+  font-size: 0.58rem;
 }
 
-.project-links a {
-  color: rgb(84, 119, 146);
-  border-bottom: 1px solid rgb(84, 119, 146);
-  padding-bottom: 1px;
-  transition: color 0.2s, border-color 0.2s;
-}
-
-.project-links a:hover {
-  color: rgb(234, 224, 207);
-  border-color: rgb(234, 224, 207);
-}
-
-/* ── FOOTER ── */
-footer {
+/* ────────────────────────────────────
+   FOOTER
+──────────────────────────────────── */
+footer.poke-box {
   text-align: center;
-  padding: 30px;
-  font-size: 0.8rem;
-  color: rgb(84, 119, 146);
-  border-top: 1px solid rgb(84, 119, 146);
-  opacity: 0.6;
+  padding: 20px;
 }
 
-/* ── RESPONSIVE ── */
-@media (max-width: 600px) {
-  #hero {
+/* ────────────────────────────────────
+   DEMO MODAL
+──────────────────────────────────── */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(33, 52, 72, 0.92);
+  z-index: 200;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.modal-box {
+  max-width: 720px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+}
+
+.modal-close {
+  display: block;
+  margin-left: auto;
+  margin-bottom: 16px;
+  background: none;
+  border: 2px solid rgb(84, 119, 146);
+  color: rgb(148, 180, 193);
+  font-family: 'Press Start 2P', monospace;
+  font-size: 0.6rem;
+  padding: 6px 12px;
+  cursor: pointer;
+  transition: border-color 0.15s, color 0.15s;
+}
+
+.modal-close:hover {
+  border-color: rgb(234, 224, 207);
+  color: rgb(234, 224, 207);
+}
+
+.demo-section {
+  margin-bottom: 28px;
+}
+
+.demo-section h3 {
+  font-size: 0.7rem;
+  color: rgb(148, 180, 193);
+  margin-bottom: 12px;
+}
+
+.demo-desc {
+  font-size: 0.6rem;
+  color: rgb(148, 180, 193);
+  margin-bottom: 14px;
+}
+
+/* Image grid */
+.demo-image-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.demo-image-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.demo-image-item img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border: 3px solid rgb(84, 119, 146);
+  image-rendering: auto;
+}
+
+.demo-label {
+  font-size: 0.5rem;
+  padding: 3px 8px;
+  border: 2px solid;
+}
+
+.spoon-label {
+  color: rgb(84, 188, 156);
+  border-color: rgb(84, 188, 156);
+}
+
+.knife-label {
+  color: rgb(224, 123, 84);
+  border-color: rgb(224, 123, 84);
+}
+
+/* Algorithm steps */
+.demo-steps {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.demo-steps li {
+  font-size: 0.6rem;
+  color: rgb(234, 224, 207);
+  line-height: 2;
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.step-num {
+  color: rgb(84, 119, 146);
+  flex-shrink: 0;
+  font-size: 0.55rem;
+  margin-top: 2px;
+}
+
+.demo-steps strong {
+  color: rgb(148, 180, 193);
+}
+
+/* Result stats */
+.demo-stat {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 2px solid rgb(84, 119, 146);
+  flex-wrap: wrap;
+}
+
+.stat-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.stat-number {
+  font-size: 1.8rem;
+  color: rgb(234, 224, 207);
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: 0.5rem;
+  color: rgb(84, 119, 146);
+  letter-spacing: 1px;
+}
+
+footer p {
+  font-size: 0.6rem;
+  color: rgb(148, 180, 193);
+}
+
+.footer-sub {
+  font-size: 0.5rem !important;
+  color: rgb(84, 119, 146) !important;
+  margin-top: 10px;
+}
+
+.claude-credit {
+  color: rgb(234, 181, 116);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  vertical-align: middle;
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+.claude-credit:hover {
+  color: rgb(255, 210, 140);
+}
+
+.claude-logo {
+  width: 12px;
+  height: 12px;
+  fill: currentColor;
+  image-rendering: auto;
+  vertical-align: middle;
+}
+
+/* ────────────────────────────────────
+   RESPONSIVE
+──────────────────────────────────── */
+@media (max-width: 640px) {
+  body { font-size: 9px; }
+
+  .container { padding: 20px 12px 40px; gap: 20px; }
+
+  .hero-inner {
     flex-direction: column;
     text-align: center;
   }
 
-  .hero-links {
-    justify-content: center;
-  }
+  .hero-text h1 { font-size: 1.1rem; }
 
-  .project-card {
+  .hero-links { justify-content: center; }
+
+  .about-body {
     flex-direction: column;
+    align-items: center;
   }
 
-  .project-thumb {
-    width: 100%;
-    height: 160px;
+  .lucario-wrap { order: -1; }
+
+  .speech-bubble {
+    left: 0;
+    transform: translateX(0) translateY(6px);
   }
+
+  .lucario-wrap:hover .speech-bubble {
+    transform: translateX(0) translateY(0);
+  }
+
+  .speech-bubble::after { left: 30%; }
+
+  .dex-body { flex-direction: column; }
+
+  .dex-sprite-area {
+    width: 100%;
+    border-right: none;
+    border-bottom: 4px solid rgb(234, 224, 207);
+  }
+
+  .towns-grid { flex-direction: column; }
 }

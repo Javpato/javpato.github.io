@@ -186,7 +186,7 @@ section.visible {
   bottom: calc(100% + 12px);
   left: 50%;
   transform: translateX(-50%) translateY(6px);
-  width: 230px;
+  width: 200px;
   background: rgb(234, 224, 207);
   color: rgb(33, 52, 72);
   border: 4px solid rgb(33, 52, 72);
@@ -219,38 +219,6 @@ section.visible {
   color: rgb(33, 52, 72);
   font-size: 0.55rem;
 }
-
-/* Language proficiency rows */
-.lang-list li {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 10px;
-  padding: 2px 0;
-  border-bottom: 1px dashed rgba(33, 52, 72, 0.25);
-}
-
-.lang-list li:last-child { border-bottom: none; }
-
-.lang-name {
-  font-size: 0.55rem;
-  color: rgb(33, 52, 72);
-  letter-spacing: 0.5px;
-}
-
-.lang-dots {
-  font-family: 'Press Start 2P', monospace;
-  font-size: 0.55rem;
-  letter-spacing: 2px;
-  line-height: 1;
-  flex-shrink: 0;
-}
-
-.lang-dots.lvl-5 { color: rgb(46, 155, 90); }   /* green — fluent */
-.lang-dots.lvl-4 { color: rgb(110, 175, 70); }  /* lime */
-.lang-dots.lvl-3 { color: rgb(220, 170, 30); }  /* amber — intermediate */
-.lang-dots.lvl-2 { color: rgb(210, 120, 60); }  /* orange — basic */
-.lang-dots.lvl-1 { color: rgb(200, 80, 60); }   /* red */
 
 .lucario-wrap:hover .speech-bubble {
   opacity: 1;
@@ -1250,10 +1218,6 @@ footer p {
   .pokeball-btn { width: 72px; }
   .skill-label { font-size: 0.52rem; }
   .skills-footnote { font-size: 0.52rem; margin-top: 16px; }
-
-  /* Language list readable at thin widths */
-  .lang-name { font-size: 0.52rem; }
-  .lang-dots { font-size: 0.5rem; letter-spacing: 1px; }
 
   /* Demo modal: 2-col image grid instead of 3 */
   .demo-image-grid { grid-template-columns: repeat(2, 1fr); }

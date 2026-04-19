@@ -988,13 +988,11 @@ footer p {
 .pokedex-screen {
   background: rgb(234, 224, 207);
   border: 4px solid rgb(33, 52, 72);
-  padding: 16px 14px;
+  padding: 16px 14px 22px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 8px;
-  flex: 1;
-  min-height: 0;
 }
 
 .bio-portrait {
@@ -1016,10 +1014,13 @@ footer p {
 }
 
 .bio-meta {
-  font-size: 0.52rem;
-  color: rgb(84, 119, 146);
+  font-size: 0.55rem;
+  color: rgb(33, 52, 72);
   text-align: center;
   letter-spacing: 1px;
+  margin-top: 6px;
+  padding: 4px 6px;
+  line-height: 1.8;
 }
 
 .pokedex-dpad {

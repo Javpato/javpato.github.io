@@ -186,7 +186,7 @@ section.visible {
   bottom: calc(100% + 12px);
   left: 50%;
   transform: translateX(-50%) translateY(6px);
-  width: 200px;
+  width: 230px;
   background: rgb(234, 224, 207);
   color: rgb(33, 52, 72);
   border: 4px solid rgb(33, 52, 72);
@@ -219,6 +219,38 @@ section.visible {
   color: rgb(33, 52, 72);
   font-size: 0.55rem;
 }
+
+/* Language proficiency rows */
+.lang-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 2px 0;
+  border-bottom: 1px dashed rgba(33, 52, 72, 0.25);
+}
+
+.lang-list li:last-child { border-bottom: none; }
+
+.lang-name {
+  font-size: 0.55rem;
+  color: rgb(33, 52, 72);
+  letter-spacing: 0.5px;
+}
+
+.lang-dots {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 0.55rem;
+  letter-spacing: 2px;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.lang-dots.lvl-5 { color: rgb(46, 155, 90); }   /* green — fluent */
+.lang-dots.lvl-4 { color: rgb(110, 175, 70); }  /* lime */
+.lang-dots.lvl-3 { color: rgb(220, 170, 30); }  /* amber — intermediate */
+.lang-dots.lvl-2 { color: rgb(210, 120, 60); }  /* orange — basic */
+.lang-dots.lvl-1 { color: rgb(200, 80, 60); }   /* red */
 
 .lucario-wrap:hover .speech-bubble {
   opacity: 1;
@@ -1193,4 +1225,90 @@ footer p {
 
   .bio-name { font-size: 0.65rem; }
   .bio-entries li { font-size: 0.55rem; }
+}
+
+/* ════════════════════════════════════
+   PHONE POLISH (≤ 640px additions)
+════════════════════════════════════ */
+@media (max-width: 640px) {
+  /* Speech bubble: never overflow the viewport */
+  .speech-bubble { width: min(230px, calc(100vw - 48px)); }
+
+  /* Hero: smaller avatar + text, friendlier tap targets */
+  .avatar { width: 96px; height: 96px; border-width: 3px; }
+  .hero-text h1 { font-size: 1rem; line-height: 1.8; }
+  .hero-title { font-size: 0.6rem; }
+  .hero-links { gap: 10px; font-size: 0.6rem; }
+  .hero-links a { padding: 6px 10px; }
+
+  /* Poke-box: tighter padding on phone */
+  .poke-box { padding: 20px 18px 18px; }
+  h2 { font-size: 0.78rem; margin-bottom: 16px; }
+
+  /* Skills: lay out 3–4 per row comfortably */
+  .skills-grid { gap: 22px 14px; }
+  .pokeball-btn { width: 72px; }
+  .skill-label { font-size: 0.52rem; }
+  .skills-footnote { font-size: 0.52rem; margin-top: 16px; }
+
+  /* Language list readable at thin widths */
+  .lang-name { font-size: 0.52rem; }
+  .lang-dots { font-size: 0.5rem; letter-spacing: 1px; }
+
+  /* Demo modal: 2-col image grid instead of 3 */
+  .demo-image-grid { grid-template-columns: repeat(2, 1fr); }
+  .demo-stat { gap: 20px; }
+  .stat-number { font-size: 1.4rem; }
+
+  /* Pokedex bio modal: compact interior */
+  .pokedex-left, .pokedex-right { padding: 16px 14px; }
+  .pokedex-lens-ring { width: 60px; height: 60px; }
+  .pokedex-lens { width: 44px; height: 44px; }
+  .bio-portrait { width: 92px; height: 92px; }
+  .pokedex-close { top: 8px; right: 8px; width: 28px; height: 28px; font-size: 0.55rem; }
+
+  /* Footer */
+  footer p { font-size: 0.55rem; }
+}
+
+/* ════════════════════════════════════
+   TINY PHONE (≤ 420px)
+════════════════════════════════════ */
+@media (max-width: 420px) {
+  body { font-size: 8.5px; }
+  .container { padding: 16px 10px 32px; gap: 18px; }
+
+  .avatar { width: 84px; height: 84px; }
+  .hero-text h1 { font-size: 0.88rem; }
+  .hero-links { gap: 8px; font-size: 0.55rem; }
+  .hero-links a { padding: 5px 8px; }
+  .pokedex-trigger { font-size: 0.5rem; padding: 7px 9px; }
+
+  /* Pokeballs fit ~3 per row */
+  .pokeball-btn { width: 64px; }
+  .pokeball-wrap { width: 50px; height: 50px; }
+  .pokeball-sprite { width: 50px; height: 50px; }
+  .skill-logo { width: 34px; height: 34px; }
+  .skill-popup-double .skill-logo { width: 20px; height: 20px; }
+  .skills-grid { gap: 18px 10px; }
+
+  /* Speech bubble clamps fully to viewport */
+  .speech-bubble { width: calc(100vw - 32px); padding: 8px 10px; }
+  .speech-bubble::after { left: 28%; }
+
+  /* Town + dex cards tighten */
+  .town-details { padding: 12px 10px; }
+  .town-desc, .town-role { font-size: 0.55rem; }
+  .dex-sprite-area { width: 100%; padding: 12px 8px; }
+  .dex-entry { padding: 12px; }
+  .dex-entry-text { font-size: 0.58rem; }
+
+  /* Pokedex bio modal tiny-phone layout */
+  .pokedex-left, .pokedex-right { padding: 14px 12px; gap: 10px; }
+  .bio-portrait { width: 78px; height: 78px; }
+  .bio-name { font-size: 0.58rem; line-height: 1.6; }
+  .bio-meta { font-size: 0.5rem; }
+  .bio-entries-title { font-size: 0.55rem; }
+  .bio-entries li { font-size: 0.5rem; padding-left: 12px; line-height: 1.9; }
+  .bio-screen { padding: 12px 10px; }
 }

@@ -26,6 +26,7 @@
             <a href="https://www.linkedin.com/in/javier-gomez-a01151283/" target="_blank">[ LINKEDIN ]</a>
             <a href="https://github.com/Javpato" target="_blank">[ GITHUB ]</a>
           </nav>
+          <button id="open-dex" class="pokedex-trigger" type="button">&#9654; OPEN POK&Eacute;DEX BIO</button>
         </div>
       </div>
     </section>
@@ -75,66 +76,92 @@
       <div class="skills-grid">
 
         <div class="pokeball-item">
-          <div class="pokeball-wrap">
-            <div class="skill-popup"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" class="skill-logo" /></div>
-            <img
-              src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/ultra-ball.png"
-              alt="Ultra Ball"
-              class="pokeball-sprite"
-            />
+          <button class="pokeball-btn" type="button" aria-expanded="false" aria-controls="skill-python">
+            <div class="pokeball-wrap">
+              <div class="skill-popup"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" class="skill-logo" /></div>
+              <img
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/ultra-ball.png"
+                alt="Ultra Ball"
+                class="pokeball-sprite"
+              />
+            </div>
+            <span class="skill-label">Python</span>
+          </button>
+          <div class="skill-detail" id="skill-python" hidden>
+            <p>Scientific analysis, data science, modelling, and research.</p>
           </div>
-          <p class="skill-label">Python</p>
         </div>
 
         <div class="pokeball-item">
-          <div class="pokeball-wrap">
-            <div class="skill-popup"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++" class="skill-logo" /></div>
-            <img
-              src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/ultra-ball.png"
-              alt="Ultra Ball"
-              class="pokeball-sprite"
-            />
+          <button class="pokeball-btn" type="button" aria-expanded="false" aria-controls="skill-cpp">
+            <div class="pokeball-wrap">
+              <div class="skill-popup"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++" class="skill-logo" /></div>
+              <img
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/ultra-ball.png"
+                alt="Ultra Ball"
+                class="pokeball-sprite"
+              />
+            </div>
+            <span class="skill-label">C++</span>
+          </button>
+          <div class="skill-detail" id="skill-cpp" hidden>
+            <p>Deep understanding of the language; shipped multiple projects.</p>
           </div>
-          <p class="skill-label">C++</p>
         </div>
 
         <div class="pokeball-item">
-          <div class="pokeball-wrap">
-            <div class="skill-popup"><span class="skill-logo-text">&#8704;</span></div>
-            <img
-              src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/great-ball.png"
-              alt="Great Ball"
-              class="pokeball-sprite"
-            />
+          <button class="pokeball-btn" type="button" aria-expanded="false" aria-controls="skill-lean">
+            <div class="pokeball-wrap">
+              <div class="skill-popup"><span class="skill-logo-text">&#8704;</span></div>
+              <img
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/great-ball.png"
+                alt="Great Ball"
+                class="pokeball-sprite"
+              />
+            </div>
+            <span class="skill-label">Lean<sup class="skill-fn-ref" title="See note below">*</sup></span>
+          </button>
+          <div class="skill-detail" id="skill-lean" hidden>
+            <p>Formal theorem proving &mdash; Paris-Saclay coursework (see note below).</p>
           </div>
-          <p class="skill-label">Lean</p>
         </div>
 
         <div class="pokeball-item">
-          <div class="pokeball-wrap">
-            <div class="skill-popup"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" class="skill-logo" /></div>
-            <img
-              src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/poke-ball.png"
-              alt="Poke Ball"
-              class="pokeball-sprite"
-            />
+          <button class="pokeball-btn" type="button" aria-expanded="false" aria-controls="skill-js">
+            <div class="pokeball-wrap">
+              <div class="skill-popup"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" class="skill-logo" /></div>
+              <img
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/poke-ball.png"
+                alt="Poke Ball"
+                class="pokeball-sprite"
+              />
+            </div>
+            <span class="skill-label">JavaScript</span>
+          </button>
+          <div class="skill-detail" id="skill-js" hidden>
+            <p>Interactive websites and fun projects built to learn the language.</p>
           </div>
-          <p class="skill-label">JavaScript</p>
         </div>
 
         <div class="pokeball-item">
-          <div class="pokeball-wrap">
-            <div class="skill-popup skill-popup-double"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" class="skill-logo" /><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" class="skill-logo" /></div>
-            <img
-              src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/poke-ball.png"
-              alt="Poke Ball"
-              class="pokeball-sprite"
-            />
+          <button class="pokeball-btn" type="button" aria-expanded="false" aria-controls="skill-htmlcss">
+            <div class="pokeball-wrap">
+              <div class="skill-popup skill-popup-double"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" class="skill-logo" /><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" class="skill-logo" /></div>
+              <img
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/poke-ball.png"
+                alt="Poke Ball"
+                class="pokeball-sprite"
+              />
+            </div>
+            <span class="skill-label">HTML &amp; CSS</span>
+          </button>
+          <div class="skill-detail" id="skill-htmlcss" hidden>
+            <p>Multiple interactive sites built for fun while learning the web.</p>
           </div>
-          <p class="skill-label">HTML &amp; CSS</p>
         </div>
 
       </div>
+      <p class="skills-footnote">*Lean: formal theorem-proving language, studied as part of the <em>Fundamentals of Mathematics</em> course at Universit&eacute; Paris-Saclay &mdash; not lean startup / lean manufacturing.</p>
     </section>
 
     <!-- ══ INTERNSHIPS ══ -->
@@ -360,6 +387,47 @@
         </div>
       </div>
 
+    </div>
+  </div>
+
+  <!-- ══ POKEDEX BIO MODAL ══ -->
+  <div id="dex-modal" class="modal-overlay pokedex-modal" aria-hidden="true" role="dialog" aria-labelledby="bio-title">
+    <div class="pokedex-frame">
+      <div class="pokedex-left">
+        <div class="pokedex-lens-ring">
+          <div class="pokedex-lens"></div>
+        </div>
+        <div class="pokedex-lights">
+          <span class="light light-red"></span>
+          <span class="light light-yellow"></span>
+          <span class="light light-green"></span>
+        </div>
+        <div class="pokedex-screen">
+          <img src="avatar.jpg" alt="Javier Gomez Mijangos" class="bio-portrait" />
+          <h3 id="bio-title" class="bio-name">JAVIER<br>GOMEZ<br>MIJANGOS</h3>
+          <p class="bio-meta">No. 001 &middot; EXPLORER &middot; STUDENT &middot; DEV</p>
+        </div>
+        <div class="pokedex-dpad">
+          <span></span><span></span><span></span><span></span>
+        </div>
+      </div>
+
+      <div class="pokedex-hinge"></div>
+
+      <div class="pokedex-right">
+        <button class="pokedex-close" type="button" aria-label="Close">&#10005;</button>
+        <div class="bio-screen">
+          <h4 class="bio-entries-title">&#9670; FIELD NOTES</h4>
+          <ul class="bio-entries">
+            <li>Spoke with the chairman of Binance.</li>
+            <li>Has lived in the UAE, Taiwan, Guatemala, and currently France.</li>
+            <li>Studied at a Taiwanese school &mdash; absorbed the culture first-hand.</li>
+            <li>Friends across every continent travelled.</li>
+            <li>Robotics class &mdash; hands-on builds and competitions.</li>
+            <li class="bio-entry-placeholder">ENTRY INCOMING</li>
+          </ul>
+        </div>
+      </div>
     </div>
   </div>
 

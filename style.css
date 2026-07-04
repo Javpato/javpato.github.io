@@ -150,6 +150,120 @@ section.visible {
 }
 
 /* ────────────────────────────────────
+   HERO POKEDEX (GitHub-logo lid, flips open)
+──────────────────────────────────── */
+.hero-pokedex {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  flex-shrink: 0;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0 0 22px;
+  cursor: pointer;
+  perspective: 620px;
+  font-family: 'Press Start 2P', monospace;
+}
+
+/* Base — revealed when the lid flips open */
+.hero-pokedex-base {
+  position: absolute;
+  inset: 0;
+  background: rgb(150, 20, 40);
+  border: 4px solid rgb(33, 52, 72);
+  outline: 3px solid rgb(234, 224, 207);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-pokedex-screen-mini {
+  width: 64px;
+  height: 64px;
+  border-radius: 8px;
+  border: 3px solid rgb(33, 52, 72);
+  background:
+    radial-gradient(circle at 34% 30%, rgba(255,255,255,0.85) 0%, rgba(255,255,255,0.15) 20%, transparent 34%),
+    radial-gradient(circle at 50% 55%, rgb(130,190,255) 0%, rgb(50,110,200) 65%, rgb(20,50,120) 100%);
+  animation: lens-glow 2.6s ease-in-out infinite;
+}
+
+/* Lid — closed red cover with the GitHub logo */
+.hero-pokedex-lid {
+  position: absolute;
+  inset: 0;
+  background: rgb(209, 52, 74);
+  border: 4px solid rgb(234, 224, 207);
+  outline: 3px solid rgb(33, 52, 72);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform-origin: top center;
+  transform: rotateX(0deg);
+  transition: transform 0.5s ease, box-shadow 0.1s ease;
+  box-shadow: 4px 4px 0 rgb(33, 52, 72);
+  z-index: 2;
+}
+
+.hero-pokedex-lid .gh-logo {
+  width: 58px;
+  height: 58px;
+  fill: rgb(234, 224, 207);
+}
+
+.hero-pokedex:hover .hero-pokedex-lid {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 rgb(33, 52, 72);
+}
+
+.hero-pokedex.open .hero-pokedex-lid,
+.hero-pokedex.open:hover .hero-pokedex-lid {
+  transform: rotateX(-158deg);
+  box-shadow: 0 -6px 10px rgba(0, 0, 0, 0.35);
+}
+
+.hero-pokedex-lights {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  display: flex;
+  gap: 6px;
+}
+
+.hd-light {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  border: 2px solid rgb(33, 52, 72);
+}
+
+.hd-light-blue  { background: rgb(130, 190, 255); animation: lens-glow 2.6s ease-in-out infinite; }
+.hd-light-red   { background: rgb(240, 80, 80); }
+.hd-light-green { background: rgb(100, 210, 120); }
+
+.hero-pokedex-hint {
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.5rem;
+  color: rgb(148, 180, 193);
+  white-space: nowrap;
+  animation: blink 1.5s step-end infinite;
+  transition: opacity 0.2s;
+}
+
+.hero-pokedex.open .hero-pokedex-hint { opacity: 0; }
+
+.hero-pokedex:focus-visible {
+  outline: 2px dashed rgb(234, 224, 207);
+  outline-offset: 6px;
+}
+
+/* ────────────────────────────────────
    ABOUT + LUCARIO
 ──────────────────────────────────── */
 .about-body {
@@ -500,6 +614,9 @@ section.visible {
 
 .type-electric { border-color: #f4d03f; color: #f4d03f; }
 .type-psychic  { border-color: #e08aff; color: #e08aff; }
+.type-ts       { border-color: #4f8cc9; color: #4f8cc9; }
+.type-sql      { border-color: #e0a458; color: #e0a458; }
+.type-wasm     { border-color: #8a7cff; color: #8a7cff; }
 
 .dex-entry {
   padding: 16px;
@@ -1003,6 +1120,15 @@ footer p {
   border: 3px solid rgb(33, 52, 72);
   background: rgb(148, 180, 193);
   image-rendering: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bio-portrait .gh-logo {
+  width: 62px;
+  height: 62px;
+  fill: rgb(33, 52, 72);
 }
 
 .bio-name {
@@ -1204,6 +1330,9 @@ footer p {
 
   /* Hero: smaller avatar + text, friendlier tap targets */
   .avatar { width: 96px; height: 96px; border-width: 3px; }
+  .hero-pokedex { width: 104px; height: 104px; margin: 4px auto 24px; }
+  .hero-pokedex-lid .gh-logo { width: 50px; height: 50px; }
+  .hero-pokedex-screen-mini { width: 56px; height: 56px; }
   .hero-text h1 { font-size: 1rem; line-height: 1.8; }
   .hero-title { font-size: 0.6rem; }
   .hero-links { gap: 10px; font-size: 0.6rem; }
@@ -1243,6 +1372,9 @@ footer p {
   .container { padding: 16px 10px 32px; gap: 18px; }
 
   .avatar { width: 84px; height: 84px; }
+  .hero-pokedex { width: 92px; height: 92px; }
+  .hero-pokedex-lid .gh-logo { width: 44px; height: 44px; }
+  .hero-pokedex-screen-mini { width: 48px; height: 48px; }
   .hero-text h1 { font-size: 0.88rem; }
   .hero-links { gap: 8px; font-size: 0.55rem; }
   .hero-links a { padding: 5px 8px; }

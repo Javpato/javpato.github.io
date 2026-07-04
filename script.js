@@ -42,6 +42,30 @@ function wireModal(triggerSelector, modalId, closeSelector) {
 wireModal('.open-demo',  'demo-modal', '.modal-close');
 wireModal('#open-dex',   'dex-modal',  '.pokedex-close');
 
+// ── Hero Pokedex: flip lid open, then launch the BIO modal ──
+const heroDex = document.getElementById('hero-dex');
+const dexModal = document.getElementById('dex-modal');
+if (heroDex && dexModal) {
+  heroDex.addEventListener('click', () => {
+    if (heroDex.classList.contains('open')) return;
+    heroDex.classList.add('open');
+    setTimeout(() => {
+      dexModal.style.display = 'flex';
+      dexModal.setAttribute('aria-hidden', 'false');
+    }, 450);
+  });
+  // Reset the lid to closed whenever the BIO modal is dismissed.
+  const resetLid = () => {
+    if (dexModal.style.display !== 'flex') heroDex.classList.remove('open');
+  };
+  dexModal.addEventListener('click', resetLid);
+  const dexClose = dexModal.querySelector('.pokedex-close');
+  if (dexClose) dexClose.addEventListener('click', resetLid);
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') setTimeout(resetLid, 0);
+  });
+}
+
 // ── Click-to-open pokeballs (single-open) ──
 const pokeballBtns = document.querySelectorAll('.pokeball-btn');
 

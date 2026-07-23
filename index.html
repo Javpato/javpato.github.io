@@ -69,7 +69,7 @@
             <ul>
               <li>French &mdash; Fluent</li>
               <li>English &mdash; Fluent</li>
-              <li>Spanish &mdash; Fluent</li>
+              <li>Spanish &mdash; Native</li>
               <li>Chinese &mdash; conversational</li>
               <li>Arabic &mdash; Basic</li>
             </ul>
@@ -85,6 +85,7 @@
 
       <!-- Skills -->
       <h2>&gt; SKILLS</h2>
+      <p class="skills-hint">CLICK ME!</p>
       <div class="skills-grid">
 
         <div class="pokeball-item">
@@ -160,8 +161,8 @@
             <div class="pokeball-wrap">
               <div class="skill-popup skill-popup-double"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" class="skill-logo" /><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" class="skill-logo" /></div>
               <img
-                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/poke-ball.png"
-                alt="Poke Ball"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/great-ball.png"
+                alt="Great Ball"
                 class="pokeball-sprite"
               />
             </div>
@@ -193,9 +194,9 @@
       <p class="skills-footnote">*Lean: formal theorem-proving language, studied as part of the <em>Fundamentals of Mathematics</em> course at Universit&eacute; Paris-Saclay &mdash; not lean startup / lean manufacturing.</p>
     </section>
 
-    <!-- ══ INTERNSHIPS ══ -->
-    <section id="internships" class="poke-box">
-      <h2>&gt; INTERNSHIPS</h2>
+    <!-- ══ EXPERIENCES ══ -->
+    <section id="experiences" class="poke-box">
+      <h2>&gt; EXPERIENCES</h2>
       <p class="section-sub">&#8212; LOCATIONS VISITED &#8212;</p>
 
       <div class="towns-grid">
@@ -207,6 +208,7 @@
             <span class="town-badge">STARTUP HUB</span>
           </div>
           <div class="town-details">
+            <p class="town-kind">INTERNSHIP</p>
             <p class="town-role">&#9670; SHADOWED STARTUP CEOs</p>
             <p class="town-desc">
               Embedded with early-stage founders across multiple sectors.
@@ -216,15 +218,19 @@
           </div>
         </div>
 
-        <div class="town-card placeholder">
-          <div class="town-sign-top">??? TOWN</div>
+        <div class="town-card visited">
+          <div class="town-sign-top">OPERATION SMILE</div>
           <div class="town-sign-body">
-            <span class="town-label">UNKNOWN</span>
-            <span class="town-badge">???</span>
+            <span class="town-label">OPERACI&Oacute;N SONRISA</span>
+            <span class="town-badge">NGO</span>
           </div>
           <div class="town-details">
-            <p class="town-role">&#9670; COMING SOON...</p>
-            <p class="town-desc">This location has not been discovered yet.</p>
+            <p class="town-kind">VOLUNTEERING</p>
+            <p class="town-role">&#9670; HELPED THE ORGANIZATION</p>
+            <p class="town-desc">
+              Helped manage and organize the organization's files, and
+              made gifts for the doctors.
+            </p>
           </div>
         </div>
 
@@ -304,10 +310,110 @@
                 Interactive platform to learn <strong>maths, physics &amp; CS</strong> &mdash;
                 including a SQL course you practise on a <strong>real database that runs
                 entirely in the browser</strong> (WebAssembly).
+                <strong>Made with AI to teach and to learn</strong>: the main focus
+                wasn't the code itself, but helping others &mdash; and myself &mdash; study.
               </p>
               <div class="dex-links">
                 <a href="https://github.com/javpato/learning-website" target="_blank">[ CODE ]</a>
                 <a href="https://javpato.github.io/learning-website/index.html" target="_blank">[ SITE ]</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Ditto — Diffusion model -->
+        <div class="dex-card">
+          <div class="dex-header">
+            <span class="dex-number">No.132</span>
+            <span class="dex-name">DIFFUSION-MON</span>
+          </div>
+          <div class="dex-body">
+            <div class="dex-sprite-area">
+              <img
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/132.png"
+                alt="Ditto"
+                class="dex-sprite"
+              />
+              <div class="dex-types">
+                <span class="type-tag type-electric">PYTHON</span>
+                <span class="type-tag type-pytorch">PYTORCH</span>
+              </div>
+            </div>
+            <div class="dex-entry">
+              <p class="dex-entry-text">
+                A <strong>diffusion model</strong> (DDPM) built while studying an
+                MIT course on generative AI &mdash; a U-Net learns to denoise step
+                by step, then <strong>generates images from pure noise</strong>
+                (MNIST &amp; Fashion-MNIST).
+              </p>
+              <div class="dex-links">
+                <a href="https://github.com/Javpato/diffusion-model" target="_blank">[ CODE ]</a>
+                <a href="#" class="open-demo-diffusion">[ DEMO ]</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Lanturn — Ray tracer -->
+        <div class="dex-card">
+          <div class="dex-header">
+            <span class="dex-number">No.171</span>
+            <span class="dex-name">RAYTRACE-MON</span>
+          </div>
+          <div class="dex-body">
+            <div class="dex-sprite-area">
+              <img
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/171.png"
+                alt="Lanturn"
+                class="dex-sprite"
+              />
+              <div class="dex-types">
+                <span class="type-tag type-cpp">C++</span>
+                <span class="type-tag type-graphics">GRAPHICS</span>
+              </div>
+            </div>
+            <div class="dex-entry">
+              <p class="dex-entry-text">
+                A from-scratch <strong>3D ray tracer</strong> following
+                <em>Ray Tracing in One Weekend</em> &mdash; light, reflections,
+                materials and shadows computed <strong>ray by ray</strong>.
+              </p>
+              <div class="dex-links">
+                <a href="https://github.com/Javpato/RayTracingProject" target="_blank">[ CODE ]</a>
+                <a href="#" class="open-demo-raytracing">[ DEMO ]</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Magikarp — Small games -->
+        <div class="dex-card">
+          <div class="dex-header">
+            <span class="dex-number">No.129</span>
+            <span class="dex-name">SMALL-GAMES-MON</span>
+          </div>
+          <div class="dex-body">
+            <div class="dex-sprite-area">
+              <img
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/129.png"
+                alt="Magikarp"
+                class="dex-sprite"
+              />
+              <div class="dex-types">
+                <span class="type-tag type-electric">PYTHON</span>
+                <span class="type-tag type-pygame">PYGAME</span>
+              </div>
+            </div>
+            <div class="dex-entry">
+              <p class="dex-entry-text">
+                Old games I made while <strong>learning to code</strong>:
+                <strong>FGWB</strong>, my own version of <em>Fireboy &amp; Watergirl</em>
+                in pygame (not very polished, but fun), and a <strong>Tetris</strong>
+                that taught me about classes in Python.
+              </p>
+              <div class="dex-links">
+                <a href="https://github.com/Javpato/FGWB" target="_blank">[ FGWB ]</a>
+                <a href="https://github.com/Javpato/Tetris" target="_blank">[ TETRIS ]</a>
               </div>
             </div>
           </div>
@@ -426,6 +532,39 @@
     </div>
   </div>
 
+  <!-- ══ DIFFUSION DEMO MODAL ══ -->
+  <div id="diffusion-modal" class="modal-overlay" aria-hidden="true">
+    <div class="modal-box poke-box">
+      <button class="modal-close">[ &#xD7; CLOSE ]</button>
+      <h2>&gt; DIFFUSION-MON &middot; DEMO</h2>
+      <div class="demo-section">
+        <h3>&#9670; GENERATED FROM PURE NOISE</h3>
+        <p class="demo-desc">
+          Samples produced by the trained model &mdash; each image starts as
+          random noise and is denoised step by step by the U-Net until a
+          digit or clothing item appears.
+        </p>
+        <img src="assets/demo/diffusion-output.png" alt="Images generated by the diffusion model" class="demo-image-single" />
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ RAYTRACING DEMO MODAL ══ -->
+  <div id="raytracing-modal" class="modal-overlay" aria-hidden="true">
+    <div class="modal-box poke-box">
+      <button class="modal-close">[ &#xD7; CLOSE ]</button>
+      <h2>&gt; RAYTRACE-MON &middot; DEMO</h2>
+      <div class="demo-section">
+        <h3>&#9670; FINAL RENDER</h3>
+        <p class="demo-desc">
+          Rendered entirely by my own C++ ray tracer &mdash; spheres with
+          different materials, reflections and shadows, one ray at a time.
+        </p>
+        <img src="assets/demo/raytracing-output.png" alt="Scene rendered by the ray tracer" class="demo-image-single" />
+      </div>
+    </div>
+  </div>
+
   <!-- ══ POKEDEX BIO MODAL ══ -->
   <div id="dex-modal" class="modal-overlay pokedex-modal" aria-hidden="true" role="dialog" aria-labelledby="bio-title">
     <div class="pokedex-frame">
@@ -439,7 +578,7 @@
           <span class="light light-green"></span>
         </div>
         <div class="pokedex-screen">
-          <span class="bio-portrait"><svg class="gh-logo" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg></span>
+          <span class="bio-portrait"><img src="avatar.jpg" alt="Javier Gomez Mijangos" class="bio-photo" /></span>
           <h3 id="bio-title" class="bio-name">JAVIER<br>GOMEZ<br>MIJANGOS</h3>
           <p class="bio-meta">No. 001 &middot; STUDENT &middot; DEV</p>
         </div>

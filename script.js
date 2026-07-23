@@ -68,6 +68,26 @@ if (heroDex && dexModal) {
   });
 }
 
+// ── Touch devices (iPhone/iPad): no hover, so make Lucario tappable ──
+const isTouch = window.matchMedia('(hover: none)').matches;
+const lucarioWrap = document.querySelector('.lucario-wrap');
+
+if (isTouch && lucarioWrap) {
+  const lucarioLabel = lucarioWrap.querySelector('.lucario-label');
+  if (lucarioLabel) lucarioLabel.textContent = 'TAP ME!';
+  const skillsHint = document.querySelector('.skills-hint');
+  if (skillsHint) skillsHint.textContent = 'TAP ME!';
+
+  lucarioWrap.addEventListener('click', (e) => {
+    e.stopPropagation();
+    lucarioWrap.classList.toggle('show-bubble');
+  });
+  // Tap anywhere else closes the bubble
+  document.addEventListener('click', () => {
+    lucarioWrap.classList.remove('show-bubble');
+  });
+}
+
 // ── Click-to-open pokeballs (single-open) ──
 const pokeballBtns = document.querySelectorAll('.pokeball-btn');
 

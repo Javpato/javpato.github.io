@@ -39,8 +39,10 @@ function wireModal(triggerSelector, modalId, closeSelector) {
   });
 }
 
-wireModal('.open-demo',  'demo-modal', '.modal-close');
-wireModal('#open-dex',   'dex-modal',  '.pokedex-close');
+wireModal('.open-demo',            'demo-modal',       '.modal-close');
+wireModal('.open-demo-diffusion',  'diffusion-modal',  '.modal-close');
+wireModal('.open-demo-raytracing', 'raytracing-modal', '.modal-close');
+wireModal('#open-dex',             'dex-modal',        '.pokedex-close');
 
 // ── Hero Pokedex: flip lid open, then launch the BIO modal ──
 const heroDex = document.getElementById('hero-dex');

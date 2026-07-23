@@ -364,6 +364,14 @@ section.visible {
 /* ────────────────────────────────────
    SKILLS — POKEBALL ANIMATIONS
 ──────────────────────────────────── */
+.skills-hint {
+  font-size: 0.5rem;
+  color: rgb(84, 119, 146);
+  margin-top: 6px;
+  text-align: center;
+  animation: blink 1.5s step-end infinite;
+}
+
 .skills-grid {
   display: flex;
   flex-wrap: wrap;
@@ -521,6 +529,13 @@ section.visible {
   padding: 14px 12px;
 }
 
+.town-kind {
+  color: rgb(84, 119, 146);
+  font-size: 0.45rem;
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+}
+
 .town-role {
   color: rgb(148, 180, 193);
   font-size: 0.58rem;
@@ -617,6 +632,10 @@ section.visible {
 .type-ts       { border-color: #4f8cc9; color: #4f8cc9; }
 .type-sql      { border-color: #e0a458; color: #e0a458; }
 .type-wasm     { border-color: #8a7cff; color: #8a7cff; }
+.type-cpp      { border-color: #659ad2; color: #659ad2; }
+.type-pytorch  { border-color: #ee4c2c; color: #ee4c2c; }
+.type-graphics { border-color: #7fdca4; color: #7fdca4; }
+.type-pygame   { border-color: #6aa84f; color: #6aa84f; }
 
 .dex-entry {
   padding: 16px;
@@ -717,6 +736,15 @@ footer.poke-box {
   flex-direction: column;
   align-items: center;
   gap: 6px;
+}
+
+.demo-image-single {
+  display: block;
+  width: 100%;
+  max-width: 640px;
+  margin: 0 auto;
+  border: 3px solid rgb(84, 119, 146);
+  image-rendering: auto;
 }
 
 .demo-image-item img {
@@ -1123,12 +1151,14 @@ footer p {
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 
-.bio-portrait .gh-logo {
-  width: 62px;
-  height: 62px;
-  fill: rgb(33, 52, 72);
+.bio-portrait .bio-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
 .bio-name {

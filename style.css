@@ -110,6 +110,46 @@ section.visible {
 }
 
 /* ────────────────────────────────────
+   NEWS FLASH
+──────────────────────────────────── */
+.news-flash {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px;
+  padding: 16px 20px;
+  font-size: 0.62rem;
+  line-height: 1.8;
+}
+
+.news-flash-tag {
+  background: rgb(234, 224, 207);
+  color: rgb(33, 52, 72);
+  padding: 4px 8px;
+  flex-shrink: 0;
+  animation: blink 1s step-end infinite;
+}
+
+.news-flash-text {
+  color: rgb(148, 180, 193);
+  transition: color 0.15s;
+}
+
+.news-flash:hover .news-flash-text {
+  color: rgb(234, 224, 207);
+}
+
+.news-flash:hover {
+  box-shadow: 6px 6px 0 rgb(148, 180, 193);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .news-flash-tag {
+    animation: none;
+  }
+}
+
+/* ────────────────────────────────────
    HERO
 ──────────────────────────────────── */
 .hero-inner {
@@ -652,6 +692,8 @@ section.visible {
 .type-pytorch  { border-color: #ee4c2c; color: #ee4c2c; }
 .type-graphics { border-color: #7fdca4; color: #7fdca4; }
 .type-pygame   { border-color: #6aa84f; color: #6aa84f; }
+.type-django   { border-color: #44b78b; color: #44b78b; }
+.type-js       { border-color: #f7df1e; color: #f7df1e; }
 
 .dex-entry {
   padding: 16px;

@@ -1,0 +1,348 @@
+{
+  "name": "Javier Gomez Mijangos",
+  "email": "javier.gomezmijan@gmail.com",
+  "github": "https://github.com/Javpato",
+  "linkedin": "https://www.linkedin.com/in/javier-gomez-a01151283/",
+  "website": "https://javpato.github.io/",
+  "institution": "Université Paris-Saclay",
+  "degree": "Double Bachelor's Degree in Mathematics and Computer Science",
+  "education_dates": "Sep 2025 - Jun 2028 (expected)",
+  "grade": "16.72/20",
+  "languages": "Spanish (native), English (fluent), French (fluent), Mandarin Chinese (conversational).",
+  "bio": "I study Mathematics and Computer Science at Université Paris-Saclay, with graduation expected in June 2028. I build interactive software and explore mathematical ideas through code. I am seeking Summer 2027 internships in software engineering, AI/ML, quantitative research, and computational research.",
+  "projects": {
+    "battle": {
+      "title": "Battle Tower",
+      "context": "Hackathon project | Programmer, team of two",
+      "date": "Nov 2026",
+      "stack": "TypeScript, React, MediaPipe, Supabase",
+      "code": "https://github.com/Javpato/real-life-battle-tower",
+      "demo": "https://javpato.github.io/real-life-battle-tower/",
+      "summary": "First place at Build Sprint (BuildNXT), among 17 submitted projects. Programmer on a team of two, implementing all application features. The exercise-driven game connects camera observations to a shared progression engine; current development includes local saves and phone-camera pairing.",
+      "sprite": 448,
+      "claims": [
+        "battle.award",
+        "battle.engine",
+        "battle.vision",
+        "battle.saves"
+      ]
+    },
+    "study": {
+      "title": "StudyVillage",
+      "context": "Hackathon project | Continued development",
+      "date": "2026 - Present",
+      "stack": "TypeScript, Node.js, IndexedDB, SQLite, WebRTC",
+      "code": "https://github.com/Javpato/studyvillage",
+      "demo": "https://javpato.github.io/studyvillage/",
+      "summary": "A hackathon project developed further into a collaborative study application. Editable notebooks and PDF annotation sit inside a Canvas village; private notes persist locally and shared pages recover after disconnection. Developed with AI-assisted coding.",
+      "sprite": 251,
+      "claims": [
+        "study.product",
+        "study.sync",
+        "study.tests"
+      ]
+    },
+    "bakery": {
+      "title": "Tiramisu Bakery",
+      "context": "Independent software project",
+      "date": "2026 - Present",
+      "stack": "Python, Django, JavaScript, SQLite",
+      "code": "",
+      "demo": "https://tiramisubakerygt.com",
+      "summary": "A bakery storefront with guest checkout, scheduled delivery, transfer-receipt review and order administration. Includes TOTP administrator authentication and tests of order and payment workflows.",
+      "sprite": 869,
+      "claims": [
+        "bakery.commerce",
+        "bakery.security"
+      ]
+    },
+    "classifier": {
+      "title": "Utensil Image Classification",
+      "context": "University project",
+      "date": "2026",
+      "stack": "Python, NumPy, pandas, scikit-learn",
+      "code": "https://github.com/Javpato/Data-Science-Spoon-knives",
+      "demo": "",
+      "summary": "University project classifying knives and spoons through foreground processing and six geometric features. Compared classical classifiers through feature distributions, balanced accuracy and confusion matrices on a small image dataset.",
+      "sprite": 25,
+      "claims": [
+        "classifier.features",
+        "classifier.compare",
+        "classifier.limits"
+      ]
+    },
+    "diffusion": {
+      "title": "Diffusion and Image Denoising",
+      "context": "Independent course-based project",
+      "date": "2026",
+      "stack": "Python, PyTorch, Hugging Face diffusers",
+      "code": "https://github.com/Javpato/diffusion-model",
+      "demo": "",
+      "summary": "Independent study of an MIT generative-AI course: implemented denoising training loops and DDPM sampling using PyTorch and Hugging Face components on MNIST/Fashion-MNIST. Recorded training losses and inspected generated samples.",
+      "sprite": 137,
+      "claims": [
+        "diffusion.training",
+        "diffusion.ddpm",
+        "diffusion.evaluation"
+      ]
+    },
+    "ray": {
+      "title": "C++ Ray Tracer",
+      "context": "Independent tutorial-based project",
+      "date": "2025",
+      "stack": "C++17, CMake, 3D geometry",
+      "code": "https://github.com/Javpato/RayTracingProject",
+      "demo": "",
+      "summary": "Implemented a CPU ray tracer following Ray Tracing in One Weekend. Ray-sphere intersections, randomized sampling, recursive scattering and material models produce scenes with reflections, refraction and depth of field.",
+      "sprite": 384,
+      "claims": [
+        "ray.geometry",
+        "ray.sampling",
+        "ray.math"
+      ]
+    }
+  },
+  "claims": {
+    "battle.award": {
+      "text": "Won 1st place among 17 projects at Build Sprint (BuildNXT); implemented all application features as the programmer on a team of two.",
+      "status": "VERIFIED",
+      "evidence": "User-confirmed contribution; organizer announcement supplied by user, 15 Nov 2026. Award applies to the submitted project, not every later feature."
+    },
+    "battle.engine": {
+      "text": "Separated exercise observations from game progression in a typed reducer; accepted unique events drive combat and rewards.",
+      "status": "VERIFIED",
+      "evidence": "real-life-battle-tower: src/tower/engine.ts, unitReceipt.ts, model.ts; current source."
+    },
+    "battle.vision": {
+      "text": "Integrated local MediaPipe pose tracking with exercise counters; retained explicit manual and assisted modes when observations cannot verify movement.",
+      "status": "VERIFIED",
+      "evidence": "real-life-battle-tower: src/exercises/ExerciseCamera.tsx, src/tower/exerciseProfiles.ts; current source, not a detector-accuracy claim."
+    },
+    "battle.saves": {
+      "text": "Implemented independent local save slots and revision-aware cloud command handling, with separate developer-preview state.",
+      "status": "VERIFIED",
+      "evidence": "real-life-battle-tower: src/tower/useTower.ts, supabase/functions/tower-command; deployment not independently certified."
+    },
+    "study.product": {
+      "text": "Developed a collaborative study application with AI-assisted coding, combining a Canvas interface, editable notebooks and PDF annotation.",
+      "status": "VERIFIED",
+      "evidence": "studyvillage: README.md and app source; hackathon origin confirmed by user."
+    },
+    "study.sync": {
+      "text": "Implemented local notebook persistence and shared-page synchronization with durable outgoing operations, revision checks and recovery after disconnection.",
+      "status": "VERIFIED",
+      "evidence": "studyvillage: app persistence/synchronization source and server; existing CV and README."
+    },
+    "study.tests": {
+      "text": "Used app/server regression tests to check document editing and synchronization behavior; packaged the application for browser and desktop use.",
+      "status": "VERIFIED",
+      "evidence": "studyvillage: package.json, app/server test suites and release README; no current test-count claim."
+    },
+    "bakery.commerce": {
+      "text": "Built a Django storefront with guest checkout, scheduled delivery, transfer-receipt review and order-management workflows.",
+      "status": "VERIFIED",
+      "evidence": "tiramisubakeryProject: orders, payments, delivery, catalog, panel source; original CV contribution."
+    },
+    "bakery.security": {
+      "text": "Implemented TOTP administrator authentication and tests covering order, payment and security workflows.",
+      "status": "VERIFIED",
+      "evidence": "tiramisubakeryProject: accounts, config/tests_seguridad.py, orders/tests.py, payments/tests.py."
+    },
+    "classifier.features": {
+      "text": "Built an image-processing pipeline to isolate utensils and extract six geometric features, including elongation, roundness and template-matching scores.",
+      "status": "VERIFIED",
+      "evidence": "Data-Science-Spoon-knives: demo.ipynb and utilities.py; university provenance confirmed by user."
+    },
+    "classifier.compare": {
+      "text": "Compared KNN, SVM, tree-based and neural-network classifiers using balanced accuracy and confusion matrices on a small knife/spoon dataset.",
+      "status": "VERIFIED",
+      "evidence": "Data-Science-Spoon-knives: demo.ipynb model list and evaluation cells; no validated accuracy claim."
+    },
+    "classifier.limits": {
+      "text": "Visualized class-specific feature distributions to examine how geometric descriptors separate knives from spoons.",
+      "status": "VERIFIED",
+      "evidence": "Data-Science-Spoon-knives: demo.ipynb feature distribution histograms and feature-space scatter plot."
+    },
+    "diffusion.training": {
+      "text": "Implemented denoising training loops on MNIST/Fashion-MNIST while studying an MIT course, using PyTorch and Hugging Face U-Net components.",
+      "status": "VERIFIED",
+      "evidence": "diffusion-course: DiffusionModel.ipynb, README.md; independent course context from original portfolio."
+    },
+    "diffusion.ddpm": {
+      "text": "Trained noise prediction with sampled diffusion timesteps, mean-squared error and Adam; generated images through iterative DDPM denoising.",
+      "status": "VERIFIED",
+      "evidence": "diffusion-course: DiffusionModel.ipynb training loop, DDPMScheduler, sampling loop."
+    },
+    "diffusion.evaluation": {
+      "text": "Recorded training-loss curves and inspected generated samples to examine how the model denoises images.",
+      "status": "VERIFIED",
+      "evidence": "diffusion-course: DiffusionModel.ipynb plots and outputs; no quantitative generative-quality evaluation found."
+    },
+    "ray.geometry": {
+      "text": "Implemented ray-sphere intersections and recursive light scattering in C++17 while following Ray Tracing in One Weekend.",
+      "status": "VERIFIED",
+      "evidence": "RayTracingProject: sphere.h, camera.h, material.h, README.md."
+    },
+    "ray.sampling": {
+      "text": "Used randomized pixel and lens sampling to render diffuse, metal and dielectric materials with depth of field.",
+      "status": "VERIFIED",
+      "evidence": "RayTracingProject: camera.h sample_square/defocus_disk_sample; material.h."
+    },
+    "ray.math": {
+      "text": "Translated vector geometry, reflection and refraction into material models, including Schlick approximation for dielectric reflectance.",
+      "status": "VERIFIED",
+      "evidence": "RayTracingProject: vec3.h, material.h."
+    },
+    "battle.award_detail": {
+      "text": "Battle Tower: programmer on a team of two, implementing all application features; selected first among 17 submitted projects.",
+      "status": "VERIFIED",
+      "evidence": "Owner-confirmed contribution and organizer announcement supplied by owner, 15 Nov 2026."
+    }
+  },
+  "roles": {
+    "ai-ml-research": {
+      "title": "AI / ML Research",
+      "description": "Mathematics, model implementation and experimental reasoning.",
+      "positioning": "Mathematics & Computer Science | AI / ML Research Internships",
+      "projects": [
+        {
+          "id": "diffusion",
+          "claims": [
+            "diffusion.training",
+            "diffusion.ddpm",
+            "diffusion.evaluation"
+          ]
+        },
+        {
+          "id": "classifier",
+          "claims": [
+            "classifier.features",
+            "classifier.compare"
+          ]
+        },
+        {
+          "id": "battle",
+          "claims": [
+            "battle.award",
+            "battle.vision"
+          ]
+        }
+      ],
+      "skills": [
+        "Python, C++, NumPy, pandas; PyTorch, diffusers, scikit-learn.",
+        "Noise prediction, image preprocessing, classifier comparison; Git, Linux."
+      ],
+      "award_separate": false
+    },
+    "software-engineering": {
+      "title": "Software Engineering",
+      "description": "Application architecture, implementation ownership and tested workflows.",
+      "positioning": "Mathematics & Computer Science | Software Engineering Internships",
+      "projects": [
+        {
+          "id": "battle",
+          "claims": [
+            "battle.award",
+            "battle.engine",
+            "battle.vision"
+          ]
+        },
+        {
+          "id": "study",
+          "claims": [
+            "study.product",
+            "study.sync"
+          ]
+        },
+        {
+          "id": "bakery",
+          "claims": [
+            "bakery.commerce",
+            "bakery.security"
+          ]
+        },
+        {
+          "id": "ray",
+          "claims": [
+            "ray.geometry"
+          ]
+        }
+      ],
+      "skills": [
+        "TypeScript, JavaScript, Python, C++, SQL; React, Django, Node.js.",
+        "IndexedDB, SQLite, Supabase, WebRTC; Git, Linux, automated tests."
+      ],
+      "award_separate": false
+    },
+    "quantitative-research": {
+      "title": "Quantitative Research",
+      "description": "Statistical comparison, mathematical implementation and numerical sampling.",
+      "positioning": "Mathematics & Computer Science | Quantitative Research Internships",
+      "projects": [
+        {
+          "id": "classifier",
+          "claims": [
+            "classifier.features",
+            "classifier.compare",
+            "classifier.limits"
+          ]
+        },
+        {
+          "id": "ray",
+          "claims": [
+            "ray.geometry",
+            "ray.sampling",
+            "ray.math"
+          ]
+        },
+        {
+          "id": "diffusion",
+          "claims": [
+            "diffusion.ddpm",
+            "diffusion.evaluation"
+          ]
+        }
+      ],
+      "skills": [
+        "Python, C++, NumPy, pandas, scikit-learn, PyTorch.",
+        "Geometric modelling, randomized sampling, classifier evaluation; Git, Linux."
+      ],
+      "award_separate": true
+    },
+    "general-research": {
+      "title": "General Research",
+      "description": "Academic preparation and computational investigation.",
+      "positioning": "Mathematics & Computer Science | Undergraduate Research Internships",
+      "projects": [
+        {
+          "id": "ray",
+          "claims": [
+            "ray.geometry",
+            "ray.math"
+          ]
+        },
+        {
+          "id": "classifier",
+          "claims": [
+            "classifier.features",
+            "classifier.compare",
+            "classifier.limits"
+          ]
+        },
+        {
+          "id": "diffusion",
+          "claims": [
+            "diffusion.training",
+            "diffusion.ddpm",
+            "diffusion.evaluation"
+          ]
+        }
+      ],
+      "skills": [
+        "Scientific programming: Python, C++, NumPy, pandas, PyTorch, scikit-learn.",
+        "Image processing, numerical geometry, model diagnostics; Git, Linux."
+      ],
+      "award_separate": true
+    }
+  }
+}

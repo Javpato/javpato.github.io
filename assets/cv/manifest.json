@@ -1,0 +1,24 @@
+{
+  "engine": "Tectonic 0.17.0",
+  "paper": "a4",
+  "profile_sha256": "0c777f9377ddb0c7c333fede3d30d05707ba8f0b08a8928885f59229ba83d9ea",
+  "template_sha256": "2955dbe3b63b7466165358e99e950ca08b23c2e583857fb08532c7e8049ee446",
+  "files": {
+    "ai-ml-research": {
+      "tex": "93a5eeeece7c5603bc7c93a664fc5c5500d6e438bc8eef2ee95c576ccf66f6d2",
+      "pdf": "b35266a1a37bc3992600a9df3a353faaac63b96a008e23c593a95b5e6abfa2f9"
+    },
+    "software-engineering": {
+      "tex": "fd3029468fc16d75cde4266350c44400a0e2fbe9ac5b009198ef5ba30a678e65",
+      "pdf": "b1853570e05a210b1dabba8d905f85b80a41473d81edae8b14e22b91a3cddfe2"
+    },
+    "quantitative-research": {
+      "tex": "b2a285a80610cd7a323182ca6883866a25c20872f14b7028ce9febaa254ecfd6",
+      "pdf": "b8b3f2e3a973f66a4617ece937d57114899c333043c275a028d48dcb1c967497"
+    },
+    "general-research": {
+      "tex": "0046da8df78468160cabe998e797227abd610c58cc3c4300e61239ff07f6d1be",
+      "pdf": "ff0648c3aa4f88c5b514012d6438fc14796640e5fb25f844009208f007185d26"
+    }
+  }
+}

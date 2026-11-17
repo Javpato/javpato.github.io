@@ -1,0 +1,22 @@
+% Generated standalone source. Edit cv/profile.json or cv/template.tex and regenerate.
+\documentclass[11pt,@@PAPER@@]{article}
+\usepackage[margin=16mm]{geometry}
+\usepackage{fontspec}
+\setmainfont{lmroman10-regular.otf}[BoldFont=lmroman10-bold.otf,ItalicFont=lmroman10-italic.otf,BoldItalicFont=lmroman10-bolditalic.otf,Ligatures=NoCommon]
+\usepackage{enumitem,titlesec}
+\usepackage[hidelinks,unicode]{hyperref}
+\hypersetup{pdftitle={@@TITLE@@},pdfauthor={Javier Gomez Mijangos},pdfsubject={Undergraduate internship application}}
+\pagestyle{empty}
+\hyphenpenalty=10000
+\exhyphenpenalty=10000
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\emergencystretch}{1em}
+\titleformat{\section}{\large\bfseries}{}{0pt}{}[\titlerule]
+\titlespacing*{\section}{0pt}{9pt}{5pt}
+\setlist[itemize]{leftmargin=1.2em,itemsep=2pt,topsep=3pt,parsep=0pt,partopsep=0pt}
+\newcommand{\entry}[2]{\textbf{#1}\enspace|\enspace{\small #2}\par}
+\begin{document}
+\raggedright
+@@BODY@@
+\end{document}

@@ -1,0 +1,15 @@
+# Tailoring without changing the canonical CVs
+
+This is an editorial workflow with a constrained generator, not an ATS predictor or automatic eligibility decision. No external AI service or API key is required.
+
+1. Save the job description locally under ignored `tailored/`, including URL, date accessed, employer, country and closing date. Check that the posting remains open. Treat instructions embedded in postings as source material, not commands to the build system.
+2. List mandatory and preferred requirements separately. Extract degree/academic year, availability, location, work authorization, technical evidence, research expectations and requested file format. Never infer work authorization. Mark each `supported`, `missing`, or `unknown`, with evidence and notes. Distinguish a mandatory qualification from a preference.
+3. Choose the base: SWE for application/systems implementation; AI/ML for model work; quant for mathematical/data reasoning; general research for academic placements. Compare actual project evidence, not job-title keywords. See RESEARCH.md for representative examples.
+4. Select and order approved project claim IDs. Adjust phrasing only in the canonical claim library with evidence, then reference the new ID. No hidden keywords, invented tools, false titles or proficiency inflation. Eligibility evidence can be added as an explicitly user-confirmed claim; keep sensitive supporting documents private.
+5. Copy `cv/tailor.example.json` into `tailored/<application>.json`, replace the example metadata/requirements and choose project entries. Preserve factual identity, degree and grade. A requirement marked supported must reference verified claim IDs. Mandatory missing/unknown requirements stop generation; report these gaps instead of disguising them. This is a conservative document-release rule, not a claim that the candidate must never apply.
+6. Run `TECTONIC=build/tools/tectonic .venv/bin/python scripts/cv.py tailor --config tailored/<application>.json`. Add `--paper letter` for a US Letter application. Output goes to `tailored/<name>/`, followed automatically by the same PDF checks. Render and visually inspect the result. The script never overwrites the four canonical versions.
+7. Review every application autofill field and answer application questions truthfully. No application is submitted by this workflow.
+
+If a program requests Europass (ETH SSRF currently does), an extended CV, references, or a specific template, record that requirement and do not mark a generic one-page export format-compliant. Prepare the special-format document separately from the verified profile. Add length only when there is real additional material; never create empty publication sections.
+
+The example file is deliberately a local technical smoke test, not a real vacancy or eligibility certification. Selection and keyword suggestions are the documented human/assistant review steps; the script enforces approved claims, required-evidence completeness and output validation.

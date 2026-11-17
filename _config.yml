@@ -1,0 +1,9 @@
+# GitHub Pages keeps the existing root and /funPage/ routes.
+exclude:
+  - cv
+  - scripts
+  - docs
+  - build
+  - tailored
+  - README.md
+  - .venv

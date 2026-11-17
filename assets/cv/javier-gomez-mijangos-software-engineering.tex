@@ -1,0 +1,65 @@
+% Generated standalone source. Edit cv/profile.json or cv/template.tex and regenerate.
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=16mm]{geometry}
+\usepackage{fontspec}
+\setmainfont{lmroman10-regular.otf}[BoldFont=lmroman10-bold.otf,ItalicFont=lmroman10-italic.otf,BoldItalicFont=lmroman10-bolditalic.otf,Ligatures=NoCommon]
+\usepackage{enumitem,titlesec}
+\usepackage[hidelinks,unicode]{hyperref}
+\hypersetup{pdftitle={Javier Gomez Mijangos - Software Engineering},pdfauthor={Javier Gomez Mijangos},pdfsubject={Undergraduate internship application}}
+\pagestyle{empty}
+\hyphenpenalty=10000
+\exhyphenpenalty=10000
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\emergencystretch}{1em}
+\titleformat{\section}{\large\bfseries}{}{0pt}{}[\titlerule]
+\titlespacing*{\section}{0pt}{9pt}{5pt}
+\setlist[itemize]{leftmargin=1.2em,itemsep=2pt,topsep=3pt,parsep=0pt,partopsep=0pt}
+\newcommand{\entry}[2]{\textbf{#1}\enspace|\enspace{\small #2}\par}
+\begin{document}
+\raggedright
+\begin{center}
+{\LARGE\bfseries Javier Gomez Mijangos}\\[4pt]
+Mathematics \& Computer Science | Software Engineering Internships\\[4pt]
+\href{mailto:javier.gomezmijan@gmail.com}{javier.gomezmijan@gmail.com}\\[2pt]
+\href{https://github.com/Javpato}{github.com/Javpato} | \href{https://www.linkedin.com/in/javier-gomez-a01151283/}{linkedin.com/in/javier-gomez-a01151283} | \href{https://javpato.github.io/}{javpato.github.io}
+\end{center}
+\section{Education}
+\entry{Université Paris-Saclay}{Sep 2025 - Jun 2028 (expected)}
+Double Bachelor's Degree in Mathematics and Computer Science\\[2pt]
+Average: \textbf{16.72/20}.
+\section{Technical Skills}
+TypeScript, JavaScript, Python, C++, SQL; React, Django, Node.js.\\[2pt]
+IndexedDB, SQLite, Supabase, WebRTC; Git, Linux, automated tests.
+\section{Selected Projects}
+\entry{\href{https://github.com/Javpato/real-life-battle-tower}{Battle Tower}}{Nov 2026}
+{\small Hackathon project | Programmer, team of two}\par
+{\small TypeScript, React, MediaPipe, Supabase}\par
+\begin{itemize}
+\item Won 1st place among 17 projects at Build Sprint (BuildNXT); implemented all application features as the programmer on a team of two.
+\item Separated exercise observations from game progression in a typed reducer; accepted unique events drive combat and rewards.
+\item Integrated local MediaPipe pose tracking with exercise counters; retained explicit manual and assisted modes when observations cannot verify movement.
+\end{itemize}
+\entry{\href{https://github.com/Javpato/studyvillage}{StudyVillage}}{2026 - Present}
+{\small Hackathon project | Continued development}\par
+{\small TypeScript, Node.js, IndexedDB, SQLite, WebRTC}\par
+\begin{itemize}
+\item Developed a collaborative study application with AI-assisted coding, combining a Canvas interface, editable notebooks and PDF annotation.
+\item Implemented local notebook persistence and shared-page synchronization with durable outgoing operations, revision checks and recovery after disconnection.
+\end{itemize}
+\entry{\href{https://tiramisubakerygt.com}{Tiramisu Bakery}}{2026 - Present}
+{\small Independent software project}\par
+{\small Python, Django, JavaScript, SQLite}\par
+\begin{itemize}
+\item Built a Django storefront with guest checkout, scheduled delivery, transfer-receipt review and order-management workflows.
+\item Implemented TOTP administrator authentication and tests covering order, payment and security workflows.
+\end{itemize}
+\entry{\href{https://github.com/Javpato/RayTracingProject}{C++ Ray Tracer}}{2025}
+{\small Independent tutorial-based project}\par
+{\small C++17, CMake, 3D geometry}\par
+\begin{itemize}
+\item Implemented ray-sphere intersections and recursive light scattering in C++17 while following Ray Tracing in One Weekend.
+\end{itemize}
+\section{Languages}
+Spanish (native), English (fluent), French (fluent), Mandarin Chinese (conversational).
+\end{document}

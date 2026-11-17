@@ -112,3 +112,27 @@ pokeballBtns.forEach((btn) => {
     }
   });
 });
+
+// Modal keyboard containment and focus restoration, including the animated bio.
+for (const modal of document.querySelectorAll('.modal-overlay')) {
+  let previousFocus = null;
+  const focusables = () => [...modal.querySelectorAll('a[href], button, input, [tabindex="0"]')].filter(el => !el.hidden && el.getClientRects().length);
+  new MutationObserver(() => {
+    const open = modal.getAttribute('aria-hidden') === 'false';
+    if (open && !modal.dataset.focusManaged) {
+      previousFocus = document.activeElement;
+      modal.dataset.focusManaged = 'true';
+      (focusables()[0] || modal).focus();
+    } else if (!open && modal.dataset.focusManaged) {
+      delete modal.dataset.focusManaged;
+      previousFocus?.focus();
+    }
+  }).observe(modal, { attributes: true, attributeFilter: ['aria-hidden'] });
+  modal.addEventListener('keydown', event => {
+    if (event.key !== 'Tab') return;
+    const items = focusables();
+    if (!items.length) { event.preventDefault(); return; }
+    if (event.shiftKey && document.activeElement === items[0]) { event.preventDefault(); items.at(-1).focus(); }
+    else if (!event.shiftKey && document.activeElement === items.at(-1)) { event.preventDefault(); items[0].focus(); }
+  });
+}

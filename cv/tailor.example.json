@@ -1,0 +1,47 @@
+{
+  "name": "example-technical-tailoring",
+  "posting_url": "Local workflow example; not a vacancy",
+  "reviewed_on": "2026-11-17",
+  "base_role": "software-engineering",
+  "requirements": [
+    {
+      "requirement": "Implement an interactive application",
+      "mandatory": true,
+      "status": "supported",
+      "evidence": [
+        "battle.engine",
+        "study.product"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "id": "battle",
+      "claims": [
+        "battle.award",
+        "battle.engine",
+        "battle.vision"
+      ]
+    },
+    {
+      "id": "study",
+      "claims": [
+        "study.product",
+        "study.sync"
+      ]
+    },
+    {
+      "id": "bakery",
+      "claims": [
+        "bakery.commerce",
+        "bakery.security"
+      ]
+    },
+    {
+      "id": "ray",
+      "claims": [
+        "ray.geometry"
+      ]
+    }
+  ]
+}

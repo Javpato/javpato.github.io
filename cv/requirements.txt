@@ -1,0 +1,3 @@
+pdfminer.six==20260107
+pypdf==7.1.0
+beautifulsoup4==4.15.0

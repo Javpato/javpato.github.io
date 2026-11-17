@@ -1,0 +1,40 @@
+name: CV and portfolio checks
+on:
+  push:
+    branches: [main]
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install Poppler
+        run: sudo apt-get update && sudo apt-get install -y poppler-utils
+      - name: Set up pinned document tools
+        run: bash scripts/setup.sh
+      - name: Check committed content and pairs
+        run: .venv/bin/python scripts/cv.py validate
+      - name: Recompile every standalone source
+        run: TECTONIC=build/tools/tectonic .venv/bin/python scripts/cv.py build
+      - name: Validate regenerated documents
+        run: .venv/bin/python scripts/cv.py validate
+      - name: Evidence and integrity release gates
+        run: .venv/bin/python scripts/test_guards.py
+      - name: Install browser testing dependency
+        run: .venv/bin/pip install playwright==1.65.2
+      - name: Browser checks
+        run: |
+          python3 -m http.server 8765 --bind 127.0.0.1 > /tmp/portfolio-http.log 2>&1 &
+          .venv/bin/python scripts/test_site.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: validation-evidence
+          path: |
+            build/validation.json
+            build/browser/

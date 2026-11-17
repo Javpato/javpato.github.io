@@ -1,0 +1,63 @@
+% Generated standalone source. Edit cv/profile.json or cv/template.tex and regenerate.
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=16mm]{geometry}
+\usepackage{fontspec}
+\setmainfont{lmroman10-regular.otf}[BoldFont=lmroman10-bold.otf,ItalicFont=lmroman10-italic.otf,BoldItalicFont=lmroman10-bolditalic.otf,Ligatures=NoCommon]
+\usepackage{enumitem,titlesec}
+\usepackage[hidelinks,unicode]{hyperref}
+\hypersetup{pdftitle={Javier Gomez Mijangos - General Research},pdfauthor={Javier Gomez Mijangos},pdfsubject={Undergraduate internship application}}
+\pagestyle{empty}
+\hyphenpenalty=10000
+\exhyphenpenalty=10000
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\emergencystretch}{1em}
+\titleformat{\section}{\large\bfseries}{}{0pt}{}[\titlerule]
+\titlespacing*{\section}{0pt}{9pt}{5pt}
+\setlist[itemize]{leftmargin=1.2em,itemsep=2pt,topsep=3pt,parsep=0pt,partopsep=0pt}
+\newcommand{\entry}[2]{\textbf{#1}\enspace|\enspace{\small #2}\par}
+\begin{document}
+\raggedright
+\begin{center}
+{\LARGE\bfseries Javier Gomez Mijangos}\\[4pt]
+Mathematics \& Computer Science | Undergraduate Research Internships\\[4pt]
+\href{mailto:javier.gomezmijan@gmail.com}{javier.gomezmijan@gmail.com}\\[2pt]
+\href{https://github.com/Javpato}{github.com/Javpato} | \href{https://www.linkedin.com/in/javier-gomez-a01151283/}{linkedin.com/in/javier-gomez-a01151283} | \href{https://javpato.github.io/}{javpato.github.io}
+\end{center}
+\section{Education}
+\entry{Université Paris-Saclay}{Sep 2025 - Jun 2028 (expected)}
+Double Bachelor's Degree in Mathematics and Computer Science\\[2pt]
+Average: \textbf{16.72/20}.
+\section{Selected Projects}
+\entry{\href{https://github.com/Javpato/RayTracingProject}{C++ Ray Tracer}}{2025}
+{\small Independent tutorial-based project}\par
+{\small C++17, CMake, 3D geometry}\par
+\begin{itemize}
+\item Implemented ray-sphere intersections and recursive light scattering in C++17 while following Ray Tracing in One Weekend.
+\item Translated vector geometry, reflection and refraction into material models, including Schlick approximation for dielectric reflectance.
+\end{itemize}
+\entry{\href{https://github.com/Javpato/Data-Science-Spoon-knives}{Utensil Image Classification}}{2026}
+{\small University project}\par
+{\small Python, NumPy, pandas, scikit-learn}\par
+\begin{itemize}
+\item Built an image-processing pipeline to isolate utensils and extract six geometric features, including elongation, roundness and template-matching scores.
+\item Compared KNN, SVM, tree-based and neural-network classifiers using balanced accuracy and confusion matrices on a small knife/spoon dataset.
+\item Visualized class-specific feature distributions to examine how geometric descriptors separate knives from spoons.
+\end{itemize}
+\entry{\href{https://github.com/Javpato/diffusion-model}{Diffusion and Image Denoising}}{2026}
+{\small Independent course-based project}\par
+{\small Python, PyTorch, Hugging Face diffusers}\par
+\begin{itemize}
+\item Implemented denoising training loops on MNIST/Fashion-MNIST while studying an MIT course, using PyTorch and Hugging Face U-Net components.
+\item Trained noise prediction with sampled diffusion timesteps, mean-squared error and Adam; generated images through iterative DDPM denoising.
+\item Recorded training-loss curves and inspected generated samples to examine how the model denoises images.
+\end{itemize}
+\section{Technical Skills}
+Scientific programming: Python, C++, NumPy, pandas, PyTorch, scikit-learn.\\[2pt]
+Image processing, numerical geometry, model diagnostics; Git, Linux.
+\section{Award}
+\textbf{1st Place, Build Sprint (BuildNXT)} \enspace|\enspace Nov 2026\par
+Battle Tower: programmer on a team of two, implementing all application features; selected first among 17 submitted projects.
+\section{Languages}
+Spanish (native), English (fluent), French (fluent), Mandarin Chinese (conversational).
+\end{document}

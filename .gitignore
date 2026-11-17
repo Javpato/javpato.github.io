@@ -1,0 +1,7 @@
+.venv/
+build/
+tailored/
+__pycache__/
+*.aux
+*.log
+*.out

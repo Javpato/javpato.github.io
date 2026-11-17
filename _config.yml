@@ -1,6 +1,6 @@
 # GitHub Pages keeps the existing root and /funPage/ routes.
 exclude:
-  - cv
+  - "cv/**"
   - scripts
   - docs
   - build

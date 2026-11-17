@@ -20,7 +20,7 @@ with sync_playwright() as pw:
    for link in page.locator('#cvs a').all():
     res=context.request.get(link.get_attribute('href') if link.get_attribute('href').startswith('http') else __import__('urllib.parse',fromlist=['urljoin']).urljoin(BASE+route,link.get_attribute('href')))
     assert res.status==200
-    if link.get_attribute('href').endswith('.pdf'):assert res.body().startswith(b'%PDF')
+    if '.pdf' in link.get_attribute('href'):assert res.body().startswith(b'%PDF')
     else:assert b'\\documentclass' in res.body()
    if width==1440:
     for card in page.locator('[data-cv-role]').all():

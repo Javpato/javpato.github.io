@@ -2,7 +2,7 @@
 
 Normal portfolio: https://javpato.github.io/ · Fun portfolio: https://javpato.github.io/funPage/
 
-The four current CVs and independent LaTeX sources are in `assets/cv/`. The source of truth is `cv/profile.json`; `cv/template.tex` supplies typography. Generated HTML regions in both pages use the same profile. Historical employer-specific CVs remain in the owner's original Documents/Cvs folder and are not published here.
+The four current CVs and independent LaTeX sources are in `assets/cv/`. The source of truth is `cv/profile.json`; `cv/template.tex` supplies typography. Generated HTML regions in both pages use the same profile. CSS/JavaScript URLs use content hashes, and PDF/source links share a profile/template revision, preventing stale browser/CDN assets after regeneration. Historical employer-specific CVs remain in the owner's original Documents/Cvs folder and are not published here.
 
 ## First setup (Linux x86-64)
 

@@ -40,7 +40,8 @@ def site_content(p,fun):
  cards=[]
  for slug,r in p['roles'].items():
   stem=base+'assets/cv/'+PREFIX+slug
-  cards.append(f'<article class="cv-card" data-cv-role="{slug}"><{card_title}>{h(r["title"])}</{card_title}><p>{h(r["description"])}</p><div class="cv-actions"><a href="{stem}.pdf" target="_blank" rel="noopener" aria-label="View {h(r["title"])} PDF">View PDF</a><a href="{stem}.pdf" download aria-label="Download {h(r["title"])} PDF">Download PDF</a><a href="{stem}.tex" download aria-label="Download {h(r["title"])} LaTeX source">LaTeX source</a></div></article>')
+  revision=digest(PROFILE.read_bytes()+(ROOT/'cv/template.tex').read_bytes())[:12]
+  cards.append(f'<article class="cv-card" data-cv-role="{slug}"><{card_title}>{h(r["title"])}</{card_title}><p>{h(r["description"])}</p><div class="cv-actions"><a href="{stem}.pdf?v={revision}" target="_blank" rel="noopener" aria-label="View {h(r["title"])} PDF">View PDF</a><a href="{stem}.pdf?v={revision}" download aria-label="Download {h(r["title"])} PDF">Download PDF</a><a href="{stem}.tex?v={revision}" download aria-label="Download {h(r["title"])} LaTeX source">LaTeX source</a></div></article>')
  cvs=f'<{title} id="cv-heading">'+('&gt; ' if fun else '')+'CVs · Summer 2027'+f'</{title}><p class="cv-intro">Four focused, one-page CVs. Each PDF is paired with its editable LaTeX source.</p><div class="cv-grid">'+''.join(cards)+'</div>'
  projects=[]
  for id,project in p['projects'].items():

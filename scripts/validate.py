@@ -62,7 +62,7 @@ def validate(directory,config=None):
    assert '97%' not in soup.get_text()
    for slug in p['roles']:
     card=soup.select_one(f'[data-cv-role="{slug}"]');links=card.select('a');assert len(links)==3
-    assert [a['href'].split('/')[-1] for a in links]==[PREFIX+slug+'.pdf',PREFIX+slug+'.pdf',PREFIX+slug+'.tex']
+    assert [urlsplit(a['href']).path.split('/')[-1] for a in links]==[PREFIX+slug+'.pdf',PREFIX+slug+'.pdf',PREFIX+slug+'.tex']
    for tag,attr in [('a','href'),('img','src'),('script','src'),('link','href')]:
     for el in soup.select(f'{tag}[{attr}]'):
      url=urlsplit(el[attr])

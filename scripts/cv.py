@@ -59,6 +59,9 @@ def expected(p,paper):
  for slug,r in p['roles'].items():files[ROOT/'assets/cv'/f'{PREFIX}{slug}.tex']=render_tex(p,r,paper)
  for file,fun in [('index.html',False),('funPage/index.html',True)]:
   path=ROOT/file;text=path.read_text()
+  for asset in (['style.css','script.js'] if fun else ['cv.css']):
+   version=digest((path.parent/asset).read_bytes())[:12]
+   text=re.sub(r'((?:href|src)=")'+re.escape(asset)+r'(?:\?v=[a-f0-9]+)?"',lambda m:m[1]+asset+'?v='+version+'"',text)
   for name,content in site_content(p,fun).items():text=replace_region(text,name,content)
   files[path]=text
  return files

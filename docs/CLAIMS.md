@@ -11,7 +11,7 @@ Reviewed 17 November 2026. VERIFIED means supported at the stated provenance lev
 | Expected June 2028; average 16.72/20 | VERIFIED by explicit owner confirmation | No transcript audit; grade period unspecified, no cumulative label/GPA conversion/rank |
 | September 2025 start | Existing self-report, consistent across portfolio and CVs | Existing dated update and CVs, not enrollment-record audit |
 | Language levels | EXISTING BUT UNVERIFIED externally | Self-reported in prior CVs; retained as self-assessments, not certificates |
-| Build Sprint first place, 17 entries, November 2026 | VERIFIED from organizer text provided by owner | Announcement names “Battle Towear”; owner identifies it as Battle Tower. BuildNXT brand supplied by owner. Prize amount omitted |
+| Build Sprint first place, November 2026 | VERIFIED from organizer text provided by owner | Announcement names “Battle Towear”; owner identifies it as Battle Tower. BuildNXT brand supplied by owner. Prize amount omitted |
 | Team of two, owner programmer implementing all features | VERIFIED by explicit owner attestation | Not a claim of sole design/art ownership or absence of AI assistance |
 | StudyVillage hackathon origin | VERIFIED by owner attestation | Event name/date/team/award unresolved; none invented |
 | Classification as university project | VERIFIED by owner attestation | Other featured projects are independent or hackathon work |

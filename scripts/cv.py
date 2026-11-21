@@ -46,6 +46,8 @@ def site_content(p,fun):
  projects=[]
  for id,project in p['projects'].items():
   links=' '.join(f'<a href="{h(project[key])}">{label}</a>' for key,label in [('demo','Live project'),('code','Source code')] if project[key])
+  if project.get('certificate'):
+   links+=f' <a href="{h(base+project["certificate"])}" target="_blank" rel="noopener">Award certificate</a>'
   if fun and id in ['classifier','diffusion','ray']:
    klass={'classifier':'open-demo','diffusion':'open-demo-diffusion','ray':'open-demo-raytracing'}[id]
    links+=f' <button class="{klass} demo-link" type="button">View demo</button>'

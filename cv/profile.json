@@ -18,7 +18,8 @@
       "stack": "TypeScript, React, MediaPipe, Supabase",
       "code": "https://github.com/Javpato/real-life-battle-tower",
       "demo": "https://javpato.github.io/real-life-battle-tower/",
-      "summary": "First place at Build Sprint (BuildNXT), among 17 submitted projects. Programmer on a team of two, implementing all application features. The exercise-driven game connects camera observations to a shared progression engine; current development includes local saves and phone-camera pairing.",
+      "certificate": "assets/awards/build-sprint-first-place-javier-gomez.webp",
+      "summary": "First place at Build Sprint (BuildNXT). Programmer on a team of two, implementing all application features. The exercise-driven game connects camera observations to a shared progression engine; current development includes local saves and phone-camera pairing.",
       "sprite": 448,
       "claims": [
         "battle.award",
@@ -104,7 +105,7 @@
   },
   "claims": {
     "battle.award": {
-      "text": "Won 1st place among 17 projects at Build Sprint (BuildNXT); implemented all application features as the programmer on a team of two.",
+      "text": "Won 1st place at Build Sprint (BuildNXT); implemented all application features as the programmer on a team of two.",
       "status": "VERIFIED",
       "evidence": "User-confirmed contribution; organizer announcement supplied by user, 15 Nov 2026. Award applies to the submitted project, not every later feature."
     },
@@ -194,7 +195,7 @@
       "evidence": "RayTracingProject: vec3.h, material.h."
     },
     "battle.award_detail": {
-      "text": "Battle Tower: programmer on a team of two, implementing all application features; selected first among 17 submitted projects.",
+      "text": "Battle Tower: programmer on a team of two, implementing all application features.",
       "status": "VERIFIED",
       "evidence": "Owner-confirmed contribution and organizer announcement supplied by owner, 15 Nov 2026."
     }
